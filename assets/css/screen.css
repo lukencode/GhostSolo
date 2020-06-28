@@ -1,0 +1,170 @@
+/*
+
+This is a development CSS file which is compiled to a minified
+production stylesheet in assets/built/screen.css using: gulp dev
+
+*/
+
+
+/* Lib - Local component imports
+/* ---------------------------------------------------------- */
+
+
+/* Base components */
+
+@import "vars.css";
+
+/* Ghost components */
+
+
+/* @import "ghost/header.css";
+@import "ghost/content.css";
+@import "ghost/readmore.css";
+@import "ghost/members.css";
+@import "ghost/errors.css";
+@import "ghost/footer.css";
+@import "ghost/badge.css"; */
+
+body {
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+.display-1,
+.display-2,
+.display-3,
+.display-4,
+.h1,
+.h2,
+.h3,
+.h4,
+h1,
+h2,
+h3,
+h4 {
+    letter-spacing: -.03em;
+}
+
+.btn {
+    font-weight: 600;
+}
+
+.btn-lg {
+    padding: .875rem 2.25rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: .3125rem;
+}
+
+#nav {
+    background-color: var(--bs-primary);
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+}
+
+#nav a.navbar-brand {
+    color: var(--bs-primary-text);
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+#nav a.nav-link {
+    color: var(--bs-primary-text);
+    font-weight: 600;
+    opacity: 0.7;
+}
+
+#nav a.nav-link:hover {
+    opacity: 1;
+}
+
+.site-heading {
+    padding: 5vw 3vw 6vw;
+    background-color: var(--bs-primary);
+}
+
+.site-heading-image {
+    border-radius: 50%!important;
+    border-color: var(--bs-light);
+    background-color: var(--bs-light);
+    max-height: 16vw;
+}
+
+.bg-primary {
+    background-color: var(--bs-primary) !important;
+}
+
+.bg-secondary {
+    background-color: var(--bs-secondary) !important;
+}
+
+.bg-light {
+    background-color: var(--bs-light) !important;
+}
+
+.text-dark {
+    color: var(--text-color)!important;
+}
+
+.text-light {
+    color: var(--text-color-light)!important;
+}
+
+.card {
+    border-radius: 0.7rem;
+    background: var(--background-color);
+}
+
+a.card.bg-secondary:hover {
+    -webkit-filter: brightness(70%);
+    filter: brightness(70%);
+    transition: all 1s ease;
+}
+
+.card.bg-secondary p,
+.card.bg-secondary h3 {
+    color: var(--bs-secondary-text);
+}
+
+.card-img,
+.card-img-top {
+    border-top-left-radius: calc(0.7rem - 1px);
+    border-top-right-radius: calc(0.7rem - 1px);
+}
+
+.card p {
+    opacity: 0.65;
+}
+
+.btn-primary-inverted {
+    color: var(--bs-primary);
+    background-color: var(--bs-primary-text);
+}
+
+.site-heading-content {
+    padding: 4vw 1rem;
+    color: var(--bs-primary-text);
+}
+
+.site-heading-content .lead {
+    font-weight: 400;
+}
+
+.post-date-2015+.post-date-2015 h3,
+.post-date-2016+.post-date-2016 h3,
+.post-date-2016+.post-date-2016 h3,
+.post-date-2017+.post-date-2017 h3,
+.post-date-2018+.post-date-2018 h3,
+.post-date-2019+.post-date-2019 h3,
+.post-date-2020+.post-date-2020 h3,
+.post-date-2021+.post-date-2021 h3,
+.post-date-2022+.post-date-2022 h3 {
+    display: none;
+}
+
+.post-date-2020+.post-date-2020 {
+    display: none;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="{{@site.lang}}">
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
+
+    <title>{{meta_title}}</title>
+
+    {{ghost_head}}
+    {{!-- Outputs important meta data and settings, should always be in <head> --}}
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="{{body_class}}" data-theme="pineapple">
+
+    <header>
+        <!-- Fixed navbar -->
+        <nav id="nav" class="navbar navbar-expand-md fixed-top navbar-dark">
+            <div class="container">
+
+
+                <a class="navbar-brand" href="{{@site.url}}">
+                    {{#if @site.logo}}
+                    <img src="{{@site.logo}}" alt="{{@site.title}}" style="max-height: 80px;" />
+                    {{else}}
+                    {{@site.title}}
+                    {{/if}}
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav"
+                    aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation"
+                    data-toggle="collapse" data-target="#nav-content">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="nav-content">
+                    {{navigation}}
+                     <button class="btn btn-primary-inverted my-2 my-sm-0" type="submit">Subscribe</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-shrink-0">
+        {{{body}}}
+    </main>
+
+    <footer class="footer mt-auto py-3 bg-dark text-light">
+        <div class="container">
+            <span class="text-muted">{{@site.title}}</span>
+        </div>
+    </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+
+    {{ghost_foot}}
+    {{!-- Outputs important scripts - should always be included before closing body tag --}}
+
+</body>
+
+</html>

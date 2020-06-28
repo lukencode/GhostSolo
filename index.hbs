@@ -1,0 +1,49 @@
+{{!< default}}
+
+
+<header class="site-heading bg-primary">
+
+    <div class="container">
+        <div class="row align-items-center">
+
+            <div class="site-heading-content col-lg-6 text-center text-lg-left mb-4 mb-lg-0">
+                <h1 class="display-3 font-weight-bold">{{@blog.title}}</h1>
+                <p class="lead mb-0">{{@blog.description}}</h2>
+                    {{> "signup_small"}}
+            </div>
+
+            <div class="col-lg-6">
+                <img src="https://pbs.twimg.com/profile_images/989370252130635777/xdyf55Cm_400x400.jpg" class="rounded mx-auto d-block img-thumbnail site-heading-image" alt="...">
+            </div>
+        </div>
+    </div>
+
+
+</header>
+
+
+
+{{#get "posts" filter="featured:true" limit="3" as |featured|}}
+<div class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            {{#foreach featured}}
+            {{> "card"}}
+            {{/foreach}}
+        </div>
+    </div>
+</div>
+{{/get}}
+
+
+
+<div class="container mt-5">
+    {{#foreach posts}}
+    <article class="post post-date-{{date format="YYYY"}}">
+        <h3>{{date format="YYYY"}}</h3>
+        <a class="post-link" href="{{url}}">
+            <h2 class="post-title">{{title}}</h2>
+        </a>
+    </article>
+    {{/foreach}}
+</div>
