@@ -10,8 +10,9 @@
     --bs-primary-text: #fff;
     --bs-secondary: #225560;
     --bs-secondary-text: #fff;
-    --bs-light: #EEEEEE;
+    --bs-light: #f3f5fb;
     --bs-font-sans-serif: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-serif: Georgia, serif;
     --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -32,14 +33,14 @@
     --background-color: #fff;
     --bs-primary: #FCC931;
     --bs-primary-text: #212529;
-    --bs-secondary: #41483C;
+    --bs-secondary: #41483c;
     --bs-secondary-text: #fff;
-    --bs-light: #EEEEEE;
+    --bs-light: #f3f5fb;
 }
 
 [data-theme="sea"] {
-    --text-color: #212529;
-    --background-color: #fff;
+    --text-color: #fff;
+    --background-color: #121212;
     --background-secondary-color: #f7f7f7;
     --bs-primary: #C7F954;
     --bs-primary-text: #212529;

@@ -2,52 +2,82 @@
 
 {{#post}}
 
-<div class="{{post_class}} mt-5">
 
-    <div class="container py-5">
-        <h1>{{title}}</h1>
-        <div><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time> <span class="bull">&bull;</span> {{reading_time}}<</div>
-    </div>
 
-    <div class="container">
-        {{content}}
-    </div>
-</div>
-
-{{!-- 
-<article class="gh-article {{post_class}}">
+<article class="gh-article {{post_class}} site-content">
 
     <header class="gh-header gh-canvas">
-        <span class="gh-post-meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time> <span class="bull">&bull;</span> {{reading_time}}</span>
-        <h1 class="gh-title">{{title}}</h1>
+        {{#primary_tag}}
+        <a href="{{url}}" class="d-inline-block py-1 mt-2 small font-weight-bold text-uppercase">{{name}}</a>
+        {{/primary_tag}}
+
+        <h1 class="display-5 post-title">{{title}}</h1>
 
         {{#if custom_excerpt}}
-        <p class="gh-excerpt">{{custom_excerpt}}</p>
+        <p class="lead mb-4 mt-2 text-secondary">{{custom_excerpt}}</p>
         {{/if}}
+
+        <hr />
+
+        {{#primary_author}}
+        <div class="author d-flex">
+            <img loading="lazy" src="{{img_url profile_image  size="m"}}" alt="{{name}}" class="avatar mr-2" />
+            <div>
+                <a href="{{url}}" class="d-block">{{name}}</a>
+                <div class="small text-secondary">
+                    <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time>
+                    <span class="bull">&bull;</span> {{reading_time}}
+                    </small>
+                </div>
+            </div>
+        </div>
+        {{/primary_author}}
+
 
         {{#if feature_image}}
-        <img class="gh-feature-image"
-            srcset="{{img_url feature_image size="s"}} 300w,
-                    {{img_url feature_image size="m"}} 600w,
-                    {{img_url feature_image size="l"}} 1000w,
-                    {{img_url feature_image size="xl"}} 2000w"
-            sizes="(max-width: 1000px) 1000px, 2000px"
-            loading="lazy"
-            src="{{img_url feature_image size="xl"}}"
-            alt="{{title}}"
-        />
+        <img class="gh-feature-image rounded" srcset="{{img_url feature_image size="s"}} 300w,
+                        {{img_url feature_image size="m"}} 600w,
+                        {{img_url feature_image size="l"}} 1000w,
+                        {{img_url feature_image size="xl"}} 2000w" sizes="(max-width: 1000px) 1000px, 2000px"
+            loading="lazy" src="{{img_url feature_image size="xl"}}" alt="{{title}}" />
         {{/if}}
+
     </header>
 
-    <div class="gh-content gh-canvas">
+
+
+    <div class="gh-content gh-canvas mt-5">
         {{content}}
     </div>
 
     <footer class="gh-footer gh-canvas">
 
-        <div class="gh-post-authors">
-            Written by {{#foreach authors}}<a href="{{url}}">{{name}}</a>{{/foreach}}
+
+        {{#primary_author}}
+        <div class="author d-flex bg-light rounded p-4 mt-4">
+            <img loading="lazy" src="{{img_url profile_image  size="m"}}" alt="{{name}}" class="avatar mr-3" />
+            <div>
+                <a href="{{url}}" class="d-block font-weight-bold">{{name}}</a>
+                {{#if bio}}
+                <small class="mt-1">{{bio}}</small>
+                {{/if}}
+
+                {{#if twitter}}
+                <div class="mt-1">
+                    <a href="https://twitter.com/{{twitter}}?ref_src=twsrc%5Etfw" class="twitter-follow-button"
+                        data-size="large" data-dnt="true" data-show-count="false">Follow @{{twitter}}</a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+
+                {{/if}}
+
+            </div>
         </div>
+
+
+
+
+        {{/primary_author}}
 
         {{!--
         <section class="gh-post-comments">
@@ -59,7 +89,7 @@
 
 </article>
 
-<aside class="gh-readmore">
+{{!-- <aside class="gh-readmore">
     <div class="gh-readmore-inner gh-container">
         <div class="gh-readmore-next">
             {{#next_post}}<a href="{{url}}">{{> "icons/arrow-left"}} <h4>{{title}}</h4></a>{{/next_post}}
@@ -70,6 +100,6 @@
             </a>{{/prev_post}}
         </div>
     </div>
-</aside>
- --}}
+</aside> --}}
+
 {{/post}}

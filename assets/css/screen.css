@@ -13,6 +13,7 @@ production stylesheet in assets/built/screen.css using: gulp dev
 /* Base components */
 
 @import "vars.css";
+@import "ghost/content.css";
 
 /* Ghost components */
 
@@ -82,7 +83,7 @@ h4 {
 }
 
 .site-heading {
-    padding: 5vw 3vw 6vw;
+    padding: calc(58px + 4vw) 3vw 6vw;
     background-color: var(--bs-primary);
 }
 
@@ -92,6 +93,51 @@ h4 {
     background-color: var(--bs-light);
     max-height: 16vw;
 }
+
+.avatar {
+    border-radius: 50%!important;
+    width: 3rem;
+    height: 3rem;
+}
+
+.avatar-lg {
+    border-radius: 50%!important;
+    width: 4rem;
+    height: 4rem;
+}
+
+.site-content {
+    padding-top: calc(58px + 5vw);
+    padding-bottom: 4vw;
+}
+
+.post-title {
+    font-weight: 500;
+}
+
+.featured-img {
+    max-width: 1040px;
+    width: 100%;
+    height: auto;
+}
+
+
+/* .post-content {
+    font-size: 1.1rem;
+    line-height: 1.6em;
+} 
+
+
+.post-content p {
+    margin-bottom: 2rem;
+}
+
+.post-content pre {
+    font-size: 0.95rem !important;
+    margin-bottom: 2rem !important;
+}
+
+*/
 
 .bg-primary {
     background-color: var(--bs-primary) !important;
@@ -144,6 +190,11 @@ a.card.bg-secondary:hover {
     background-color: var(--bs-primary-text);
 }
 
+.btn-primary-inverted:hover {
+    background-color: var(--bs-primary);
+    color: var(--bs-primary-text);
+}
+
 .site-heading-content {
     padding: 4vw 1rem;
     color: var(--bs-primary-text);
@@ -162,9 +213,5 @@ a.card.bg-secondary:hover {
 .post-date-2020+.post-date-2020 h3,
 .post-date-2021+.post-date-2021 h3,
 .post-date-2022+.post-date-2022 h3 {
-    display: none;
-}
-
-.post-date-2020+.post-date-2020 {
     display: none;
 }

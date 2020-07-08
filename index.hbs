@@ -37,12 +37,12 @@
 
 
 
-<div class="container mt-5">
+<div class="container my-5">
     {{#foreach posts}}
     <article class="post post-date-{{date format="YYYY"}}">
-        <h3>{{date format="YYYY"}}</h3>
-        <a class="post-link" href="{{url}}">
-            <h2 class="post-title">{{title}}</h2>
+        <h3 class="mt-4 mb-2">{{date format="YYYY"}}</h3>
+        <a href="{{url}}">
+            <h2 class="h5 mb-2 pb-1">{{title}}</h2>
         </a>
     </article>
     {{/foreach}}

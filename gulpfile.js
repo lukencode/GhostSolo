@@ -49,7 +49,7 @@ function css(done) {
         postcss(processors),
         // purgecss({
         //     content: ['./**/*.hbs'],
-        //     whitelistPatterns: [/data-theme*/, /post-date*/]
+        //     whitelistPatterns: [/data-theme*/, /post-date*/, /gh-*/]
         // }),
         dest('assets/built/', { sourcemaps: '.' }),
         livereload()

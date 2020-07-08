@@ -1,62 +1,24 @@
-
-
 /* Content grid
 /* ---------------------------------------------------------- */
 
 .gh-canvas {
     display: grid;
-    grid-template-columns:
-        [full-start]
-          minmax(calc(calc(100% - 1200px) / 2), 1fr)
-            [wide-start]
-                auto
-                    [main-start]
-                        720px
-                    [main-end]
-                auto
-            [wide-end]
-          minmax(calc(calc(100% - 1200px) / 2), 1fr)
-        [full-end]
-    ;
+    grid-template-columns: [full-start] minmax(calc(calc(100% - 1200px) / 2), 1fr) [wide-start] auto [main-start] 820px [main-end] auto [wide-end] minmax(calc(calc(100% - 1200px) / 2), 1fr) [full-end];
 }
 
 @media (max-width: 1296px) {
     .gh-canvas {
-        grid-template-columns:
-            [full-start]
-            4vw
-                [wide-start]
-                    auto
-                        [main-start]
-                            720px
-                        [main-end]
-                    auto
-                [wide-end]
-            4vw
-            [full-end]
-        ;
+        grid-template-columns: [full-start] 4vmin [wide-start] auto [main-start] 720px [main-end] auto [wide-end] 4vmin [full-end];
     }
 }
 
 @media (max-width: 778px) {
     .gh-canvas {
-        grid-template-columns:
-            [full-start]
-            4vw
-                [wide-start]
-                    0
-                        [main-start]
-                            auto
-                        [main-end]
-                    0
-                [wide-end]
-            4vw
-            [full-end]
-        ;
+        grid-template-columns: [full-start] 4vmin [wide-start] 0 [main-start] auto [main-end] 0 [wide-end] 4vmin [full-end];
     }
 }
 
-.gh-canvas > * {
+.gh-canvas>* {
     grid-column: main-start / main-end;
 }
 
@@ -73,40 +35,51 @@
 }
 
 
+/*
+Images
+*/
+
+.gh-feature-image {
+    grid-column: wide-start / wide-end;
+    width: 100%;
+    margin: 6vmin 0 0;
+}
+
+
 /* Content & Typography
 /* ---------------------------------------------------------- */
 
-.gh-content > * + * {
-    margin-top: 4vmin;
-}
-
-.gh-content > [id] + * {
-    margin-top: 1.5rem;
+.gh-content>*+* {
+    margin-top: 0.5rem;
 }
 
 .gh-content [id]:not(:first-child) {
     margin: 1.5em 0 0;
 }
 
-.gh-content [id] + .kg-card,
-.gh-content blockquote + .kg-card {
+.gh-content>[id]+* {
+    margin-top: 1.5rem;
+}
+
+.gh-content [id]+.kg-card,
+.gh-content blockquote+.kg-card {
     margin-top: 6vmin;
 }
 
-.gh-canvas > blockquote,
-.gh-canvas > ol,
-.gh-canvas > ul,
-.gh-canvas > dl,
-.gh-canvas > p {
-    font-family: var(--font-serif);
+.gh-canvas>blockquote,
+.gh-canvas>ol,
+.gh-canvas>ul,
+.gh-canvas>dl,
+.gh-canvas>p {
+    font-family: var(--bs-font-serif);
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 1.3rem;
     line-height: 1.6em;
 }
 
-.gh-content > ul,
-.gh-content > ol,
-.gh-content > dl {
+.gh-content>ul,
+.gh-content>ol,
+.gh-content>dl {
     padding-left: 1.9em;
 }
 
@@ -114,7 +87,7 @@
     margin-top: 6vmin;
 }
 
-.gh-content hr + * {
+.gh-content hr+* {
     margin-top: 6vmin !important;
 }
 
@@ -130,7 +103,7 @@
     top: 0;
     bottom: 0;
     width: 0.3rem;
-    background: var(--color-primary);
+    background: var(--bs-primary);
 }
 
 @media (max-width: 650px) {
@@ -141,9 +114,8 @@
     .gh-canvas p {
         font-size: 1.8rem;
     }
-
     .gh-content blockquote::before {
-        left: -4vw;
+        left: -4vmin;
     }
 }
 
@@ -151,25 +123,25 @@
 /* Cards
 /* ---------------------------------------------------------- */
 
-:not(.kg-card):not([id]) + .kg-card {
+.gh-content :not(.kg-card):not([id])+.kg-card {
     margin-top: 6vmin;
 }
 
-.kg-card + :not(.kg-card):not([id]) {
+.gh-content .kg-card+ :not(.kg-card) {
     margin-top: 6vmin;
 }
 
 .kg-card figcaption {
     padding: 1.5rem 1.5rem 0;
     text-align: center;
-    color: rgba(0,0,0,0.5);
+    color: rgba(0, 0, 0, 0.5);
     font-weight: 600;
     font-size: 1.3rem;
     line-height: 1.4em;
 }
 
 .kg-card figcaption strong {
-    color: rgba(0,0,0,0.8);
+    color: rgba(0, 0, 0, 0.8);
 }
 
 .gh-canvas :not(pre) code {
@@ -184,12 +156,15 @@
     border-radius: 0.25em;
 }
 
-.gh-canvas > pre {
+.gh-canvas>pre {
     overflow: scroll;
     padding: 16px 20px;
-    background: rgba(255,255,255,0.8);
+    background: rgba(255, 255, 255, 0.8);
     border-radius: 5px;
-    box-shadow: 0 2px 6px -2px rgba(0,0,0,.1), 0 0 1px rgba(0,0,0,.4);
+    box-shadow: 0 2px 6px -2px rgba(0, 0, 0, .1), 0 0 1px rgba(0, 0, 0, .4);
+    grid-column: wide-start/wide-end;
+    width: 100%;
+    margin: 6vmin 0 0;
 }
 
 .kg-embed-card {
@@ -207,7 +182,7 @@
 /* Galleries
 /* ---------------------------------------------------------- */
 
-.kg-gallery-card + .kg-gallery-card {
+.kg-gallery-card+.kg-gallery-card {
     margin-top: 0.75em;
 }
 
@@ -251,8 +226,8 @@
     flex-wrap: wrap;
     flex-direction: row-reverse;
     color: currentColor;
-    background: rgba(255,255,255,0.6);
-    font-family: var(--font-sans-serif);
+    background: rgba(255, 255, 255, 0.6);
+    font-family: var(--bs-font-sans-serif);
     text-decoration: none;
     border-radius: 5px;
     box-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.4);
@@ -349,6 +324,7 @@
 .kg-width-wide.kg-card-hascaption img {
     grid-column: wide-start / wide-end;
 }
+
 .kg-width-full.kg-card-hascaption img {
     grid-column: 1 / -1;
 }
@@ -378,20 +354,18 @@
 }
 
 .gh-content tbody tr:nth-child(2n + 1) {
-    background-color: rgba(0,0,0,0.1);
+    background-color: rgba(0, 0, 0, 0.1);
     padding: 1px;
 }
 
 .gh-content tbody tr:nth-child(2n + 2) td:last-child {
-    box-shadow:
-        inset 1px 0 rgba(0,0,0,0.1),
-        inset -1px 0 rgba(0,0,0,0.1);
+    box-shadow: inset 1px 0 rgba(0, 0, 0, 0.1), inset -1px 0 rgba(0, 0, 0, 0.1);
 }
 
 .gh-content tbody tr:nth-child(2n + 2) td {
-    box-shadow: inset 1px 0 rgba(0,0,0,0.1);
+    box-shadow: inset 1px 0 rgba(0, 0, 0, 0.1);
 }
 
 .gh-content tbody tr:last-child {
-    border-bottom: 1px solid rgba(0,0,0,.1);
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
