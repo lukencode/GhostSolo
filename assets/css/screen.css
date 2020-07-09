@@ -101,6 +101,7 @@ input {
 #nav {
     background-color: var(--bs-primary);
     border-bottom: 1px solid rgba(255, 255, 255, .08);
+    color: var(--bs-primary-text);
 }
 
 #nav a.navbar-brand {
