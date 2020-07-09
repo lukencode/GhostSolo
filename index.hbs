@@ -40,10 +40,19 @@
 <div class="container my-5">
     {{#foreach posts}}
     <article class="post post-date-{{date format="YYYY"}}">
-        <h3 class="mt-4 mb-2">{{date format="YYYY"}}</h3>
-        <a href="{{url}}">
-            <h2 class="h5 mb-2 pb-1">{{title}}</h2>
-        </a>
+        <h3 class="mt-4 mb-3">{{date format="YYYY"}}</h3>
+        <div class="d-flex align-items-baseline mb-2 pb-1">
+            <div class="text-secondary text-right mr-2" style="width:58px">{{date format="MMM D"}}</div>
+            
+            <a href="{{url}}" class="d-flex">
+                {{#if featured}}
+                ***
+                {{/if}}
+                <h2 class="h5 font-weight-normal mb-0">
+                    {{title}}
+                </h2>
+            </a>
+        </div>
     </article>
     {{/foreach}}
 </div>

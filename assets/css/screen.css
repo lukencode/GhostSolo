@@ -33,6 +33,7 @@ body {
 
 a {
     text-decoration: none;
+    color: var(--link-color);
 }
 
 .display-1,
@@ -50,8 +51,13 @@ h4 {
     letter-spacing: -.03em;
 }
 
+input {
+    border-color: transparent;
+}
+
 .btn {
     font-weight: 600;
+    border-color: transparent;
 }
 
 .btn-lg {
@@ -59,6 +65,37 @@ h4 {
     font-size: 1.25rem;
     line-height: 1.5;
     border-radius: .3125rem;
+}
+
+.bg-primary {
+    background-color: var(--bs-primary) !important;
+    color: var(--bs-primary-text) !important;
+}
+
+.bg-secondary {
+    background-color: var(--bs-secondary) !important;
+    color: var(--bs-secondary-text) !important;
+}
+
+.btn-secondary {
+    background-color: var(--bs-secondary) !important;
+    color: var(--bs-secondary-text) !important;
+}
+
+.bg-light {
+    background-color: var(--bs-light) !important;
+}
+
+.text-dark {
+    color: var(--text-color)!important;
+}
+
+.text-light {
+    color: var(--text-color-light)!important;
+}
+
+.text-secondary {
+    color: var(--text-color-light)!important;
 }
 
 #nav {
@@ -119,44 +156,6 @@ h4 {
     max-width: 1040px;
     width: 100%;
     height: auto;
-}
-
-
-/* .post-content {
-    font-size: 1.1rem;
-    line-height: 1.6em;
-} 
-
-
-.post-content p {
-    margin-bottom: 2rem;
-}
-
-.post-content pre {
-    font-size: 0.95rem !important;
-    margin-bottom: 2rem !important;
-}
-
-*/
-
-.bg-primary {
-    background-color: var(--bs-primary) !important;
-}
-
-.bg-secondary {
-    background-color: var(--bs-secondary) !important;
-}
-
-.bg-light {
-    background-color: var(--bs-light) !important;
-}
-
-.text-dark {
-    color: var(--text-color)!important;
-}
-
-.text-light {
-    color: var(--text-color-light)!important;
 }
 
 .card {

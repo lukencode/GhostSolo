@@ -1,8 +1,7 @@
 /* Variables
 /* ---------------------------------------------------------- */
 
-:root,
-[data-theme="default"] {
+:root {
     --text-color: #343a40;
     --text-color-light: #f8f9fa;
     --background-color: #fff;
@@ -16,35 +15,18 @@
     --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-[data-theme="orchid"] {
-    --text-color: #212529;
+[data-theme="light"] {
+    /*Text and backgrounds*/
     --background-color: #fff;
-    --background-secondary-color: #f7f7f7;
-    --bs-primary: #741AAC;
-    --bs-primary-text: #fff;
-    --bs-secondary: #005437;
+    --text-color: #121416d8;
+    --text-color-light: #777676bb;
+    --link-color: #333652;
+    /*Mast head*/
+    --bs-primary: #FAD02C;
+    --bs-primary-text: #003049;
+    /*Secondary highlight*/
+    --bs-secondary: #333652;
     --bs-secondary-text: #fff;
-    --bs-light: #DEBAD6;
-}
-
-[data-theme="pineapple"] {
-    --text-color: #212529;
-    --text-color-light: #f8f9fa;
-    --background-color: #fff;
-    --bs-primary: #FCC931;
-    --bs-primary-text: #212529;
-    --bs-secondary: #41483c;
-    --bs-secondary-text: #fff;
-    --bs-light: #f3f5fb;
-}
-
-[data-theme="sea"] {
-    --text-color: #fff;
-    --background-color: #121212;
-    --background-secondary-color: #f7f7f7;
-    --bs-primary: #C7F954;
-    --bs-primary-text: #212529;
-    --bs-secondary: #14C2DD;
-    --bs-secondary-text: #fff;
-    --bs-light: #EEEEEE;
+    /*Alternative background*/
+    --bs-light: #E9EAEC;
 }

@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/themes/prism-twilight.min.css" integrity="sha256-rAcsWTglHtCcQgu1Lat/fUZqB+uBsYR+4dHZJUQ5Fug=" crossorigin="anonymous" />
 </head>
 
-<body class="{{body_class}}" data-theme="pineapple">
+<body class="{{body_class}}" data-theme="light">
     <header>
         <nav id="nav" class="navbar navbar-expand-md fixed-top navbar-dark">
             <div class="container">
@@ -55,7 +55,14 @@
 
     <footer class="footer mt-auto py-3 bg-dark text-light">
         <div class="container">
-            <span class="text-muted">{{@site.title}}</span>
+            <div class="row">
+            <div class="col">
+                <span class="text-muted">{{@site.title}}</span>
+            </div>
+            <div class="col text-right">
+                Theme <a href="#">GhostSolo</a>
+            </div>
+            </div>
         </div>
     </footer>
 
