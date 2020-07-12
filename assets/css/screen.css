@@ -51,6 +51,7 @@ input {
 }
 
 .text-light,
+.text-muted,
 .text-secondary {
     color: var(--text-color-light)!important;
 }
