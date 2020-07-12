@@ -1,6 +1,6 @@
-<div class="col-md-4 col-lg-3 d-flex mb-3">
+<div class="col-md-4 col-lg-4 col-xl-3 d-flex mb-3">
     {{#if feature_image}}
-    <div class="card text-dark">
+    <div class="card">
 
         <a href=href="{{url}}">
             <img class="card-img-top" srcset="{{img_url feature_image size="s"}} 300w,
@@ -14,18 +14,18 @@
             <a href="{{url}}">
                 <h4>{{title}}</h4>
             </a>
-            <p class="flex-grow-1  mb-0">
+            <p class="flex-grow-1 mb-0 small">
                 {{excerpt}}
             </p>
         </div>
 
     </div>
     {{else}}
-    <a href="{{url}}" class="card card-body justify-content-between bg-secondary text-light">
+    <a href="{{url}}" class="card card-body justify-content-between no-image">
         <div></div>
         <div>
             <h3>{{title}}</h3>
-            <p class="flex-grow-1 mb-0">
+            <p class="flex-grow-1 mb-0 small">
                 {{excerpt}}
             </p>
         </div>

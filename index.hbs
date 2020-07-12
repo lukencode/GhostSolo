@@ -1,7 +1,7 @@
 {{!< default}}
 
 
-<header class="site-heading bg-primary">
+<header class="site-heading">
 
     <div class="container">
         <div class="row align-items-center">
@@ -13,7 +13,7 @@
             </div>
 
             <div class="col-lg-6">
-                <img src="https://pbs.twimg.com/profile_images/989370252130635777/xdyf55Cm_400x400.jpg" class="rounded mx-auto d-block img-thumbnail site-heading-image" alt="...">
+                <img src="https://pbs.twimg.com/profile_images/1281104920465207296/bfXOxLFb_400x400.png" class="mx-auto d-block img-thumbnail site-heading-image" alt="...">
             </div>
         </div>
     </div>
@@ -24,7 +24,7 @@
 
 
 {{#get "posts" filter="featured:true" limit="3" as |featured|}}
-<div class="py-5 bg-light">
+<div class="py-5 bg-alternative">
     <div class="container">
         <div class="row">
             {{#foreach featured}}
@@ -42,16 +42,16 @@
     <article class="post post-date-{{date format="YYYY"}}">
         <h3 class="mt-4 mb-3">{{date format="YYYY"}}</h3>
         <div class="d-flex align-items-baseline mb-2 pb-1">
-            <div class="text-secondary text-right mr-2" style="width:58px">{{date format="MMM D"}}</div>
+            <div class="text-secondary text-right mr-2 col-auto" style="width:58px">{{date format="MMM D"}}</div>
             
+            <div class="col">
             <a href="{{url}}" class="d-flex">
-                {{#if featured}}
-                ***
-                {{/if}}
                 <h2 class="h5 font-weight-normal mb-0">
-                    {{title}}
+                    {{#if featured}}⭐{{/if}}{{title}}
                 </h2>
             </a>
+
+            </div>
         </div>
     </article>
     {{/foreach}}

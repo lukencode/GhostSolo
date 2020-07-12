@@ -1,39 +1,15 @@
-/*
-
-This is a development CSS file which is compiled to a minified
-production stylesheet in assets/built/screen.css using: gulp dev
-
-*/
-
-
-/* Lib - Local component imports
-/* ---------------------------------------------------------- */
-
-
-/* Base components */
-
-@import "vars.css";
-@import "ghost/content.css";
-
-/* Ghost components */
-
-
-/* @import "ghost/header.css";
-@import "ghost/content.css";
-@import "ghost/readmore.css";
-@import "ghost/members.css";
-@import "ghost/errors.css";
-@import "ghost/footer.css";
-@import "ghost/badge.css"; */
-
 body {
-    background: var(--background-color);
-    color: var(--text-color);
+    background: var(--background-color) !important;
+    color: var(--text-color) !important;
 }
 
-a {
+body a {
     text-decoration: none;
     color: var(--link-color);
+}
+
+body a:hover {
+    text-decoration: underline;
 }
 
 .display-1,
@@ -56,62 +32,43 @@ input {
 }
 
 .btn {
-    font-weight: 600;
+    font-weight: 600 !important;
     border-color: transparent;
 }
 
-.btn-lg {
-    padding: .875rem 2.25rem;
-    font-size: 1.25rem;
-    line-height: 1.5;
-    border-radius: .3125rem;
-}
-
-.bg-primary {
-    background-color: var(--bs-primary) !important;
-    color: var(--bs-primary-text) !important;
-}
-
-.bg-secondary {
-    background-color: var(--bs-secondary) !important;
-    color: var(--bs-secondary-text) !important;
-}
-
 .btn-secondary {
-    background-color: var(--bs-secondary) !important;
-    color: var(--bs-secondary-text) !important;
+    background-color: var(--button-color) !important;
+    border-color: var(--button-color) !important;
+    color: var(--button-text) !important;
 }
 
-.bg-light {
-    background-color: var(--bs-light) !important;
+.bg-alternative {
+    background-color: var(--alternate-background-colour) !important;
 }
 
 .text-dark {
     color: var(--text-color)!important;
 }
 
-.text-light {
-    color: var(--text-color-light)!important;
-}
-
+.text-light,
 .text-secondary {
     color: var(--text-color-light)!important;
 }
 
 #nav {
-    background-color: var(--bs-primary);
+    background-color: var(--masthead-color);
     border-bottom: 1px solid rgba(255, 255, 255, .08);
-    color: var(--bs-primary-text);
+    color: var(--masthead-text);
 }
 
 #nav a.navbar-brand {
-    color: var(--bs-primary-text);
+    color: var(--masthead-text);
     font-weight: 600;
     font-size: 1.3rem;
 }
 
 #nav a.nav-link {
-    color: var(--bs-primary-text);
+    color: var(--masthead-text);
     font-weight: 600;
     opacity: 0.7;
 }
@@ -122,14 +79,22 @@ input {
 
 .site-heading {
     padding: calc(58px + 4vw) 3vw 6vw;
-    background-color: var(--bs-primary);
+    background-color: var(--masthead-color);
+    /* background: linear-gradient(165deg, var(--masthead-color) 50%, var(--background-color) 50%); */
 }
 
 .site-heading-image {
     border-radius: 50%!important;
-    border-color: var(--bs-light);
-    background-color: var(--bs-light);
+    border-color: var(--alternate-background-colour);
+    background-color: var(--alternate-background-colour);
     max-height: 16vw;
+}
+
+.site-heading .btn-lg {
+    padding: .875rem 2rem;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    border-radius: .3125rem;
 }
 
 .avatar {
@@ -161,18 +126,27 @@ input {
 
 .card {
     border-radius: 0.7rem;
-    background: var(--background-color);
+    background: var(--background-color) !important;
 }
 
-a.card.bg-secondary:hover {
+a.card.no-image {
+    background-color: var(--button-color) !important;
+    color: var(--button-text) !important;
+}
+
+a.card.no-image {
+    text-decoration: none;
+}
+
+a.card.no-image:hover {
     -webkit-filter: brightness(70%);
     filter: brightness(70%);
     transition: all 1s ease;
 }
 
-.card.bg-secondary p,
-.card.bg-secondary h3 {
-    color: var(--bs-secondary-text);
+.card.no-image p,
+.card.no-image h3 {
+    color: var(--button-text);
 }
 
 .card-img,
@@ -185,19 +159,9 @@ a.card.bg-secondary:hover {
     opacity: 0.65;
 }
 
-.btn-primary-inverted {
-    color: var(--bs-primary);
-    background-color: var(--bs-primary-text);
-}
-
-.btn-primary-inverted:hover {
-    background-color: var(--bs-primary);
-    color: var(--bs-primary-text);
-}
-
 .site-heading-content {
     padding: 4vw 1rem;
-    color: var(--bs-primary-text);
+    color: var(--masthead-text);
 }
 
 .site-heading-content .lead {

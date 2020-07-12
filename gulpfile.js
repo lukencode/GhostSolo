@@ -14,6 +14,8 @@ var colorFunction = require('postcss-color-function');
 var cssnano = require('cssnano');
 var easyimport = require('postcss-easy-import');
 var purgecss = require('gulp-purgecss')
+var sass = require('gulp-sass');
+sass.compiler = require('node-sass');
 
 function serve(done) {
     livereload.listen();
@@ -41,11 +43,12 @@ function css(done) {
         easyimport,
         colorFunction(),
         autoprefixer(),
-        cssnano()
+        //cssnano()
     ];
 
     pump([
-        src('assets/css/*.css', { sourcemaps: true }),
+        src('assets/css/theme.scss', { sourcemaps: true }),
+        sass(),
         postcss(processors),
         // purgecss({
         //     content: ['./**/*.hbs'],
