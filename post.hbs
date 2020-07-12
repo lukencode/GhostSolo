@@ -2,8 +2,6 @@
 
 {{#post}}
 
-
-
 <article class="gh-article {{post_class}} site-content">
 
     <header class="gh-header gh-canvas">
@@ -33,7 +31,6 @@
         </div>
         {{/primary_author}}
 
-
         {{#if feature_image}}
         <img class="gh-feature-image rounded" srcset="{{img_url feature_image size="s"}} 300w,
                         {{img_url feature_image size="m"}} 600w,
@@ -44,20 +41,18 @@
 
     </header>
 
-
-
     <div class="gh-content gh-canvas mt-5">
         {{content}}
     </div>
 
     <footer class="gh-footer gh-canvas">
 
-
         {{#primary_author}}
         <div class="author d-flex bg-alternative rounded p-4 mt-4">
             <img loading="lazy" src="{{img_url profile_image  size="m"}}" alt="{{name}}" class="avatar mr-3" />
             <div>
                 <a href="{{url}}" class="d-block font-weight-bold">{{name}}</a>
+
                 {{#if bio}}
                 <small class="mt-1">{{bio}}</small>
                 {{/if}}
@@ -68,7 +63,6 @@
                         data-size="large" data-dnt="true" data-show-count="false">Follow @{{twitter}}</a>
                     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
-
                 {{/if}}
 
             </div>
@@ -84,18 +78,5 @@
     </footer>
 
 </article>
-
-{{!-- <aside class="gh-readmore">
-    <div class="gh-readmore-inner gh-container">
-        <div class="gh-readmore-next">
-            {{#next_post}}<a href="{{url}}">{{> "icons/arrow-left"}} <h4>{{title}}</h4></a>{{/next_post}}
-        </div>
-        <div class="gh-readmore-prev">
-            {{#prev_post}}<a href="{{url}}">
-                <h4>{{title}}</h4> {{> "icons/arrow-right"}}
-            </a>{{/prev_post}}
-        </div>
-    </div>
-</aside> --}}
 
 {{/post}}
