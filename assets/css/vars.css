@@ -7,7 +7,7 @@
     --text-color: #121416d8;
     --text-color-light: #777676bb;
     --link-color: #333652;
-    --masthead-color: #FAD02C;
+    --masthead-color: #ffc107;
     --masthead-text: #003049;
     --button-color: #333652;
     --button-text: #fff;
@@ -16,7 +16,7 @@
     --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-.theme-light {
+[data-theme='light'] {
     --background-color: #fff;
     --alternate-background-colour: #E9EAEC;
     --text-color: #121416d8;
@@ -31,7 +31,7 @@
     --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-.theme-dark {
+[data-theme='dark'] {
     --background-color: #121212;
     --alternate-background-colour: #1c1d1f;
     --text-color: #F7F8F8;

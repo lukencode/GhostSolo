@@ -16,7 +16,7 @@
 .gh-auth-form p {
     margin: 10px 0 4vmin 0;
     font-size: 1.7rem;
-    color: rgba(0,0,0,0.6)
+    color: rgba(0, 0, 0, 0.6)
 }
 
 .gh-auth-form p small {
@@ -48,6 +48,7 @@
     }
 }
 
+
 /* Members Forms
 /* ---------------------------------------------------------- */
 
@@ -69,9 +70,11 @@ form[data-members-form] .message-error {
     height: 15px;
     width: 15px;
 }
+
 .message-success svg {
     fill: #fff;
 }
+
 .message-error svg {
     fill: var(--color-error);
 }
@@ -94,9 +97,11 @@ form[data-members-form].error .message-error {
     background: var(--color-base);
     border-radius: var(--radius);
 }
+
 form[data-members-form].success .message-success {
     background: var(--color-success);
 }
+
 form[data-members-form].error .message-error {
     color: var(--color-error);
     background: #fff;
@@ -108,14 +113,19 @@ form[data-members-form] .gh-button {
     min-width: 120px;
 }
 
+
 /*-- Loading --*/
 
+
 /* Hide button text */
+
 form[data-members-form].loading .gh-button-content {
     visibility: hidden;
 }
 
+
 /* Show loading spinner */
+
 form[data-members-form].loading .gh-button-loader {
     display: inline-block;
     position: absolute;
@@ -126,16 +136,20 @@ form[data-members-form].loading .gh-button-loader {
 }
 
 .gh-button-loader svg path,
-.gh-button-loader svg rect{
-  fill: #fff;
+.gh-button-loader svg rect {
+    fill: #fff;
 }
 
+
 /*-- Show success message on success --*/
+
 form[data-members-form].success .message-success {
     display: block;
 }
 
+
 /*-- Show error message on error --*/
+
 form[data-members-form].error .message-error {
     display: block;
 }

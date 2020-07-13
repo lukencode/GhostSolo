@@ -65,12 +65,12 @@ input {
 #nav a.navbar-brand {
     color: var(--masthead-text);
     font-weight: 600;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 #nav a.nav-link {
     color: var(--masthead-text);
-    font-weight: 600;
+    font-weight: 500;
     opacity: 0.7;
 }
 
@@ -178,5 +178,35 @@ a.card.no-image:hover {
 .post-date-2020+.post-date-2020 h3,
 .post-date-2021+.post-date-2021 h3,
 .post-date-2022+.post-date-2022 h3 {
+    display: none;
+}
+
+
+/*  Members */
+
+form[data-members-form] .loading-text,
+form[data-members-form] .message-success,
+form[data-members-form] .message-error {
+    display: none;
+}
+
+form[data-members-form].success .message-success,
+form[data-members-form].error .message-error {
+    display: block;
+}
+
+form[data-members-form].success .message-success {
+    display: block;
+}
+
+form[data-members-form].error .message-error {
+    display: block;
+}
+
+form[data-members-form].loading .loading-text {
+    display: block;
+}
+
+form[data-members-form].loading .text {
     display: none;
 }

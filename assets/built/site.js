@@ -1,0 +1,2 @@
+var toggle=document.getElementById("theme-toggle"),storedTheme=localStorage.getItem("theme");storedTheme&&document.documentElement.setAttribute("data-theme",storedTheme),toggle.onclick=function(){var e="light"===document.documentElement.getAttribute("data-theme")?"dark":"light";document.documentElement.setAttribute("data-theme",e),toggle.innerText=e,localStorage.setItem("theme",e)};
+//# sourceMappingURL=site.js.map

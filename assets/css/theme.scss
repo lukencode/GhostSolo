@@ -14,5 +14,219 @@
 $enable-responsive-font-sizes: true;
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "vars.css";
-@import "screen.css";
 @import "ghost/content.css";
+body {
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+body a {
+    text-decoration: none;
+    color: var(--link-color);
+}
+
+body a:hover {
+    text-decoration: underline;
+    color: var(--link-color);
+    -webkit-filter: brightness(80%);
+    filter: brightness(80%);
+}
+
+.display-1,
+.display-2,
+.display-3,
+.display-4,
+.h1,
+.h2,
+.h3,
+.h4,
+h1,
+h2,
+h3,
+h4 {
+    letter-spacing: -.03em;
+}
+
+input {
+    border-color: transparent;
+}
+
+.btn {
+    font-weight: 600 !important;
+    border-color: transparent;
+}
+
+.btn-secondary {
+    background-color: var(--button-color) !important;
+    border-color: var(--button-color) !important;
+    color: var(--button-text) !important;
+}
+
+.bg-alternative {
+    background-color: var(--alternate-background-colour) !important;
+}
+
+.text-dark {
+    color: var(--text-color)!important;
+}
+
+.text-light,
+.text-muted,
+.text-secondary {
+    color: var(--text-color-light)!important;
+}
+
+#nav {
+    background-color: var(--masthead-color);
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+    color: var(--masthead-text);
+}
+
+#nav a.navbar-brand {
+    color: var(--masthead-text);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+#nav a.nav-link {
+    color: var(--masthead-text);
+    font-weight: 500;
+    opacity: 0.7;
+}
+
+#nav a.nav-link:hover {
+    opacity: 1;
+}
+
+.site-heading {
+    padding: calc(58px + 4vw) 3vw 6vw;
+    background-color: var(--masthead-color);
+    /* background: linear-gradient(165deg, var(--masthead-color) 50%, var(--background-color) 50%); */
+}
+
+.site-heading-image {
+    border-radius: 50%!important;
+    border-color: var(--alternate-background-colour);
+    background-color: var(--alternate-background-colour);
+    max-height: 16vw;
+}
+
+.site-heading .btn-lg {
+    padding: .875rem 2rem;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    border-radius: .3125rem;
+}
+
+.avatar {
+    border-radius: 50%!important;
+    width: 3rem;
+    height: 3rem;
+}
+
+.avatar-lg {
+    border-radius: 50%!important;
+    width: 4rem;
+    height: 4rem;
+}
+
+.site-content {
+    padding-top: calc(58px + 5vw);
+    padding-bottom: 4vw;
+}
+
+.post-title {
+    font-weight: 500;
+}
+
+.featured-img {
+    max-width: 1040px;
+    width: 100%;
+    height: auto;
+}
+
+.card {
+    border-radius: 0.7rem;
+    background: var(--background-color) !important;
+}
+
+a.card.no-image {
+    background-color: var(--button-color) !important;
+    color: var(--button-text) !important;
+}
+
+a.card.no-image {
+    text-decoration: none;
+}
+
+a.card.no-image:hover {
+    -webkit-filter: brightness(70%);
+    filter: brightness(70%);
+    transition: all 1s ease;
+}
+
+.card.no-image p,
+.card.no-image h3 {
+    color: var(--button-text);
+}
+
+.card-img,
+.card-img-top {
+    border-top-left-radius: calc(0.7rem - 1px);
+    border-top-right-radius: calc(0.7rem - 1px);
+}
+
+.card p {
+    opacity: 0.65;
+}
+
+.site-heading-content {
+    padding: 4vw 1rem;
+    color: var(--masthead-text);
+}
+
+.site-heading-content .lead {
+    font-weight: 400;
+}
+
+.post-date-2015+.post-date-2015 h3,
+.post-date-2016+.post-date-2016 h3,
+.post-date-2016+.post-date-2016 h3,
+.post-date-2017+.post-date-2017 h3,
+.post-date-2018+.post-date-2018 h3,
+.post-date-2019+.post-date-2019 h3,
+.post-date-2020+.post-date-2020 h3,
+.post-date-2021+.post-date-2021 h3,
+.post-date-2022+.post-date-2022 h3 {
+    display: none;
+}
+
+
+/*  Members */
+
+form[data-members-form] .loading-text,
+form[data-members-form] .message-success,
+form[data-members-form] .message-error {
+    display: none;
+}
+
+form[data-members-form].success .message-success,
+form[data-members-form].error .message-error {
+    display: block;
+}
+
+form[data-members-form].success .message-success {
+    display: block;
+}
+
+form[data-members-form].error .message-error {
+    display: block;
+}
+
+form[data-members-form].loading .loading-text {
+    display: block;
+}
+
+form[data-members-form].loading .text {
+    display: none;
+}
