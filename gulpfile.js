@@ -50,10 +50,10 @@ function css(done) {
         src('assets/css/theme.scss', { sourcemaps: true }),
         sass(),
         postcss(processors),
-        // purgecss({
-        //     content: ['./**/*.hbs'],
-        //     whitelistPatterns: [/data-theme*/, /post-date*/, /gh-*/]
-        // }),
+        purgecss({
+            content: ['./**/*.hbs'],
+            whitelistPatterns: [/data-theme*/, /post-date*/, /gh-*/, /kg-*/]
+        }),
         dest('assets/built/', { sourcemaps: '.' }),
         livereload()
     ], handleError(done));
