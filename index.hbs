@@ -6,23 +6,27 @@
     <div class="container">
         <div class="row align-items-center">
             {{#if @site.logo}}
-                <div class="site-heading-content col-lg-6 text-center text-lg-left mb-4 mb-lg-0 order-1 order-sm-2 order-xs-2">
+                <div class="site-heading-content col-lg-6 text-center text-lg-left mb-4 mb-lg-0 order-1 order-sm-2 order-xs-2">                    
+            {{else}}            
+                <div class="site-heading-content col text-center text-lg-left mb-4 mb-lg-0">                    
+            {{/if}}
                     <h1 class="display-3 font-weight-bold">{{@blog.title}}</h1>
                     <p class="lead mb-0">{{@blog.description}}</h2>
+
                     {{#if @labs.members}}
                         {{> "signup_small"}}
                     {{/if}}
+                    
+                    {{#if @site.twitter}}
+                    <div class="my-3">
+                        <a href="https://twitter.com/{{@site.twitter}}" class="btn btn-sm btn-secondary-inverted mr-2">{{> "icons/twitter"}} Follow {{@site.twitter}}</a>
+                    </div>
+                    {{/if}}
                 </div>
+                
+            {{#if @site.logo}}
                 <div class="col-lg-6 order-lg-2 order-sm-1 order-xs-1">
                     <img src="{{@site.logo}}" class="mx-auto d-block img-thumbnail site-heading-image" alt="{{@blog.title}}">
-                </div>
-            {{else}}
-                <div class="site-heading-content col text-center text-lg-left mb-4 mb-lg-0">
-                    <h1 class="display-3 font-weight-bold">{{@blog.title}}</h1>
-                    <p class="lead mb-0">{{@blog.description}}</h2>
-                    {{#if @labs.members}}
-                        {{> "signup_small"}}
-                    {{/if}}
                 </div>
             {{/if}}
         </div>
@@ -33,11 +37,11 @@
 
 
 
-{{#get "posts" filter="featured:true" limit="3" as |featured|}}
+{{#get "posts" filter="tags:hash-pinned" limit="4" as |pinned|}}
 <div class="py-5 bg-alternative">
     <div class="container">
         <div class="row">
-            {{#foreach featured}}
+            {{#foreach pinned}}
             {{> "card"}}
             {{/foreach}}
         </div>

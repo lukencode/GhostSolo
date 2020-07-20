@@ -49,7 +49,7 @@
 
         {{#primary_author}}
         <div class="author d-flex bg-alternative rounded p-4 mt-4">
-            <img loading="lazy" src="{{img_url profile_image  size="m"}}" alt="{{name}}" class="avatar mr-3" />
+            <img loading="lazy" src="{{img_url profile_image  size="l"}}" alt="{{name}}" class="avatar avatar-lg mr-3" />
             <div>
                 <a href="{{url}}" class="d-block font-weight-bold">{{name}}</a>
 
@@ -58,7 +58,7 @@
                 {{/if}}
 
                 {{#if twitter}}
-                <div class="mt-1">
+                <div class="mt-2">
                     <a href="https://twitter.com/{{twitter}}?ref_src=twsrc%5Etfw" class="twitter-follow-button"
                         data-size="large" data-dnt="true" data-show-count="false">Follow @{{twitter}}</a>
                     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

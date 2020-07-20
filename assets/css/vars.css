@@ -1,22 +1,8 @@
 /* Variables
 /* ---------------------------------------------------------- */
 
-:root {
-    --background-color: #fff;
-    --alternate-background-colour: #E9EAEC;
-    --text-color: #121416d8;
-    --text-color-light: #777676bb;
-    --link-color: #333652;
-    --masthead-color: #ffc107;
-    --masthead-text: #003049;
-    --button-color: #333652;
-    --button-text: #fff;
-    --bs-font-sans-serif: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --bs-font-serif: Georgia, serif;
-    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-}
 
-[data-theme='light'] {
+/* html:root {
     --background-color: #fff;
     --alternate-background-colour: #E9EAEC;
     --text-color: #121416d8;
@@ -29,15 +15,30 @@
     --bs-font-sans-serif: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --bs-font-serif: Georgia, serif;
     --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+} */
+
+html[data-theme='light'] {
+    --background-color: #fff;
+    --alternate-background-colour: #f7f7f9;
+    --text-color: #121416d8;
+    --text-color-light: #777676bb;
+    --link-color: #543fd7;
+    --masthead-color: #543fd7;
+    --masthead-text: #fff;
+    --button-color: #263238;
+    --button-text: #fff;
+    --bs-font-sans-serif: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-serif: Georgia, serif;
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-[data-theme='dark'] {
-    --background-color: #121212;
-    --alternate-background-colour: #1c1d1f;
+html[data-theme='dark'] {
+    --background-color: #212a2e;
+    --alternate-background-colour: #263238;
     --text-color: #F7F8F8;
     --text-color-light: #8A8F98;
     --link-color: #828fff;
-    --masthead-color: #121212;
+    --masthead-color: #212a2e;
     --masthead-text: #fff;
     --button-color: #543fd7;
     --button-text: #fff;

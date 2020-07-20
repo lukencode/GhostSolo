@@ -46,6 +46,10 @@
                         <a class="btn btn-secondary my-2 my-sm-0" href="{{@site.url}}/signin/">Subscribe</a>
                     {{/if}}
 
+                    <button id="theme-toggle" class="btn btn-link btn-sm ml-2 small" type="button">
+                        <span class="d-block-light d-none">{{> "icons/moon"}}</span>
+                        <span class="d-block-dark d-none">{{> "icons/sun"}}</span>
+                    </button>
                 </div>
             </div>
         </nav>
@@ -58,12 +62,15 @@
     <footer class="footer mt-auto py-3 bg-alternative">
         <div class="container">
             <div class="row">
-                <div class="col">
-                    <span>{{@site.title}}</span>
+                <div class="col d-flex align-items-center small">
+                    <div class="font-weight-bold mr-3">                    
+                        {{@site.title}}
+                    </div>
+                    {{navigation type="secondary"}}
                 </div>
-                <div class="col-auto d-flex flex-row-reverse d-flex align-items-center">
-                    <button id="theme-toggle" class="btn btn-secondary btn-sm ml-2 small" type="button">light</button>
-                    <a href="#" class="small">GhostSolo theme</a>
+                <div class="col-auto d-flex d-flex align-items-center small text-secondary">
+                    <span>Published with Ghost & </span> 
+                    <a href="https://lukelowrey.com/ghostsolo" class="pl-1">GhostSolo</a>
                 </div>
             </div>
         </div>

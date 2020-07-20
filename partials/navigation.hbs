@@ -1,24 +1,13 @@
 {{#if isSecondary}}
-    <ul class="nav" role="menu">
-        {{#foreach navigation}}
-            <li class="nav-{{slug}}" role="menuitem">
-                <a href="{{url}}">
-                    <svg class="icon" role="img" aria-label="{{slug}} icon">
-                        <title>{{slug}}</title>
-                        <use xlink:href="#{{slug}}"></use>
-                    </svg>
-                </a>
-            </li>
-        {{/foreach}}
-    </ul>
+    {{#foreach navigation}}
+    <a class="mr-2" href="{{url absolute="true"}}">{{label}}</a>
+    {{/foreach}}
 {{else}}
-    <ul class="navbar-nav mr-auto mb-2 mb-md-0" role="menu">
-        {{#foreach navigation}}
-            <li class="{{link_class for=(url) class=(concat "nav-item nav-" slug)}}" role="menuitem">
-                <a class="nav-link" href="{{url absolute="true"}}">{{label}}</a>
-            </li>
-        {{/foreach}}
-    </ul>
-
-
+<ul class="navbar-nav mr-auto mb-2 mb-md-0" role="menu">
+    {{#foreach navigation}}
+    <li class="{{link_class for=(url) class=(concat "nav-item nav-" slug)}}" role="menuitem">
+        <a class="nav-link" href="{{url absolute="true"}}">{{label}}</a>
+    </li>
+    {{/foreach}}
+</ul>
 {{/if}}
