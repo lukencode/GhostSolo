@@ -47,8 +47,15 @@ h4 {
     letter-spacing: -.03em;
 }
 
-input {
-    border-color: transparent;
+[data-theme='dark'] .form-control {
+    // background-color: var(--background-color) !important;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-color: rgba(0, 0, 0, 0.6);
+    color: var(--text-color) !important;
+}
+
+[data-theme='dark'] .form-control:focus {
+    color: var(--text-color) !important;
 }
 
 .btn {
@@ -75,15 +82,16 @@ a.btn-secondary-inverted:hover {
     text-decoration: none;
 }
 
+.text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 .bg-alternative {
     background-color: var(--alternate-background-colour) !important;
 }
 
-.text-dark {
-    color: var(--text-color)!important;
-}
-
-.text-light,
 .text-muted,
 .text-secondary {
     color: var(--text-color-light)!important;
@@ -103,13 +111,13 @@ a.btn-secondary-inverted:hover {
 #nav a.navbar-brand {
     color: var(--masthead-text);
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 #nav a.nav-link,
 #nav .btn-link {
     color: var(--masthead-text);
-    font-weight: 500;
+    font-weight: 400;
     filter: brightness(80%);
 }
 
@@ -119,15 +127,31 @@ a.btn-secondary-inverted:hover {
     text-decoration: none;
 }
 
+#nav .navbar-toggler {
+    color: var(--masthead-text);
+    border-color: var(--masthead-text);
+    filter: brightness(60%);
+}
+
+#nav .navbar-toggler:hover {
+    filter: brightness(100%);
+}
+
 .site-heading {
     padding: calc(58px + 4vw) 3vw 6vw;
     background-color: var(--masthead-color);
+    position: relative;
     /* background: linear-gradient(165deg, var(--masthead-color) 50%, var(--background-color) 50%); */
 }
 
 .site-heading-content {
     padding: 4vw 1rem;
     color: var(--masthead-text);
+    z-index: 500;
+}
+
+.bg-alternative .site-heading-content {
+    color: var(--text-color);
 }
 
 .site-heading-image {
@@ -137,11 +161,31 @@ a.btn-secondary-inverted:hover {
     max-height: 16vw;
 }
 
+.site-heading .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #212529;
+    opacity: .5;
+}
+
 .site-heading .btn-lg {
     padding: .875rem 2rem;
     font-size: 1.2rem;
     line-height: 1.5;
     border-radius: .3125rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .site-heading .btn-lg {
+        padding: .5rem 1rem;
+        font-size: 1rem;
+    }
+    .site-heading .form-control-lg {
+        font-size: 1rem;
+    }
 }
 
 .avatar {
@@ -151,9 +195,13 @@ a.btn-secondary-inverted:hover {
 }
 
 .avatar-lg {
-    border-radius: 50%!important;
     width: 4rem;
     height: 4rem;
+}
+
+.avatar-xl {
+    width: 6rem;
+    height: 6rem;
 }
 
 .site-content {

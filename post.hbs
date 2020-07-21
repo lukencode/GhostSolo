@@ -49,7 +49,8 @@
 
         {{#primary_author}}
         <div class="author d-flex bg-alternative rounded p-4 mt-4">
-            <img loading="lazy" src="{{img_url profile_image  size="l"}}" alt="{{name}}" class="avatar avatar-lg mr-3" />
+            <img loading="lazy" src="{{img_url profile_image  size="l"}}" alt="{{name}}"
+                class="avatar avatar-lg mr-3" />
             <div>
                 <a href="{{url}}" class="d-block font-weight-bold">{{name}}</a>
 
@@ -68,6 +69,13 @@
             </div>
         </div>
         {{/primary_author}}
+
+        {{#if @labs.members}}
+        <div class="text-secondary text-uppercase font-weight-bold mt-4 mb-1">Subscribe</div>
+        <div class="d-flex justify-content-center">
+            {{> "signup_small"}}
+        </div>
+        {{/if}}
 
         {{!--
         <section class="gh-post-comments">

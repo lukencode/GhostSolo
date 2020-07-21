@@ -11,10 +11,12 @@
                 <div class="site-heading-content col text-center text-lg-left mb-4 mb-lg-0">                    
             {{/if}}
                     <h1 class="display-3 font-weight-bold">{{@blog.title}}</h1>
-                    <p class="lead mb-0">{{@blog.description}}</h2>
+                    <p class="lead mb-0">{{@blog.description}}</p>
 
                     {{#if @labs.members}}
+                    <div class="mt-4">
                         {{> "signup_small"}}
+                    </div>
                     {{/if}}
                     
                     {{#if @site.twitter}}
