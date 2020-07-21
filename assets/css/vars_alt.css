@@ -1,0 +1,30 @@
+html:root {
+    --accent-color: #FCC931;
+    --bs-font-sans-serif: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-serif: Georgia, serif;
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+html[data-theme='light'] {
+    --background-color: #fff;
+    --alternate-background-colour: #EEEEEE;
+    --text-color: #121416d8;
+    --text-color-light: #777676bb;
+    --link-color: #3164FC;
+    --masthead-color: var(--accent-color);
+    --masthead-text: #41483C;
+    --button-color: #41483C;
+    --button-text: #fff;
+}
+
+html[data-theme='dark'] {
+    --background-color: #212a2e;
+    --alternate-background-colour: #41483C;
+    --text-color: #F7F8F8;
+    --text-color-light: #8A8F98;
+    --link-color: #4773f8;
+    --masthead-color: #212a2e;
+    --masthead-text: #fff;
+    --button-color: var(--accent-color);
+    --button-text: #121416d8;
+}

@@ -1,35 +1,20 @@
-/* Variables
-/* ---------------------------------------------------------- */
-
-
-/* html:root {
-    --background-color: #fff;
-    --alternate-background-colour: #E9EAEC;
-    --text-color: #121416d8;
-    --text-color-light: #777676bb;
-    --link-color: #543fd7;
-    --masthead-color: #543fd7;
-    --masthead-text: #fff;
-    --button-color: #1c1d1f;
-    --button-text: #fff;
+html:root {
+    --accent-color: #543fd7;
     --bs-font-sans-serif: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --bs-font-serif: Georgia, serif;
     --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-} */
+}
 
 html[data-theme='light'] {
     --background-color: #fff;
     --alternate-background-colour: #f7f7f9;
     --text-color: #121416d8;
     --text-color-light: #777676bb;
-    --link-color: #543fd7;
-    --masthead-color: #543fd7;
+    --link-color: var(--accent-color);
+    --masthead-color: var(--accent-color);
     --masthead-text: #fff;
     --button-color: #263238;
     --button-text: #fff;
-    --bs-font-sans-serif: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --bs-font-serif: Georgia, serif;
-    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 html[data-theme='dark'] {
@@ -40,9 +25,6 @@ html[data-theme='dark'] {
     --link-color: #828fff;
     --masthead-color: #212a2e;
     --masthead-text: #fff;
-    --button-color: #543fd7;
+    --button-color: var(--accent-color);
     --button-text: #fff;
-    --bs-font-sans-serif: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --bs-font-serif: Georgia, serif;
-    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
