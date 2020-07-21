@@ -154,6 +154,10 @@ a.btn-secondary-inverted:hover {
     color: var(--text-color);
 }
 
+.site-heading-image-container {
+    z-index: 500;
+}
+
 .site-heading-image {
     border-radius: 50%!important;
     border-color: var(--alternate-background-colour);

@@ -1,21 +1,23 @@
-
 {{#if @member}}
-
-    <h4 class="font-weight-bold pt-2 mt-1 m-0">👋 Hi {{@member.firstname }}</h4>
-
-
+<div class="pt-2 mt-1 m-0 w-100">
+    <h4 class="font-weight-bold m-0 mb-1">👋 Hi {{@member.firstname }},</h4>
+    <p class="mb-0 text-secondary">Thanks for subscribing!</p>
+</div>
 {{else}}
 
-    <form data-members-form="signup" class="member-form">
-        <div class="d-flex justify-content-between align-items-stretch">
-            <input aria-label="Email Address" class="form-control form-control-lg d-flex flex-grow-1 mr-2" data-members-email type="email" placeholder="youremail@example.com" required="true" autocomplete="false" autofocus />
-            <button class="btn btn-lg btn-secondary" type="submit">                
-                <span class="text">Subscribe</span>
-                <span class="loading-text">Loading..</span>
-            </button>
-        </div>
-        <div data-members-error class="small font-weight-bold pt-2"><!-- error message will appear here --></div>
-    </form>
- 
+<form data-members-form="signup" class="member-form">
+    <div class="d-flex justify-content-between align-items-stretch">
+        <input aria-label="Email Address" class="form-control form-control-lg d-flex flex-grow-1 mr-2"
+            data-members-email type="email" placeholder="youremail@example.com" required="true" autocomplete="false"
+            autofocus />
+        <button class="btn btn-lg btn-secondary" type="submit">
+            <span class="text">Subscribe</span>
+            <span class="loading-text">Loading..</span>
+        </button>
+    </div>
+    <div data-members-error class="small font-weight-bold pt-2">
+        <!-- error message will appear here -->
+    </div>
+</form>
+
 {{/if}}
- 

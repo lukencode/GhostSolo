@@ -1,7 +1,12 @@
 {{!< default}}
 
 
+{{#if @site.cover_image}}
+<header class="site-heading" style="background-image:url('{{img_url @site.cover_image size="xl"}}')">
+    <div class="overlay"></div>
+{{else}}
 <header class="site-heading">
+{{/if}}
 
     <div class="container">
         <div class="row align-items-center">
@@ -27,7 +32,7 @@
                 </div>
                 
             {{#if @site.logo}}
-                <div class="col-lg-6 order-lg-2 order-sm-1 order-xs-1">
+                <div class="col-lg-6 order-lg-2 order-sm-1 order-xs-1 site-heading-image-container">
                     <img src="{{@site.logo}}" class="mx-auto d-block img-thumbnail site-heading-image" alt="{{@blog.title}}">
                 </div>
             {{/if}}
@@ -39,7 +44,7 @@
 
 
 
-{{#get "posts" filter="tags:hash-pinned" limit="4" as |pinned|}}
+{{#get "posts" filter="tags:hash-pinned" as |pinned|}}
 <div class="py-5 bg-alternative">
     <div class="container">
         <div class="row">
