@@ -12,8 +12,7 @@
         "desktop": "assets/screenshot-desktop.jpg"
     },
     "config": {
-        "default_theme": "dark",
-        "posts_per_page": 15,
+        "posts_per_page": 25,
         "image_sizes": {
             "xxs": {
                 "width": 30

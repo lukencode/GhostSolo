@@ -2,30 +2,49 @@
 {{!< default}}
 
 
-<article class="gh-article {{post_class}} site-content">
+<header class="site-heading bg-alternative">
 
-    <header class="gh-header gh-canvas">
-        <h1 class="display-5 post-title">{{statusCode}}</h1>
-        <p class="lead mb-4 mt-2 text-secondary">{{message}}</p>
-    </header>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="site-heading-content col-lg-6 text-center text-lg-left mb-4 mb-lg-0">
+                <h1 class="font-weight-bold">{{statusCode}}</h1>
+
+                <p class="lead mb-0">
+                    {{message}}
+                </p>
+            </div>
+        </div>
+    </div>
+
+</header>
 
 
+{{#if errorDetails}}
+<section class="gh-content gh-canvas mt-5">
+    <h4>Theme errors:</h4>
+    <ul class="gh-error-stack-list">
+        {{#foreach errorDetails}}
+        <li>
+            <h5 class="gh-error-stack-function">{{{rule}}}</h5>
 
-    {{#if errorDetails}}
-    <section class="gh-content gh-canvas mt-5">
-        <h4>Theme errors:</h4>
-        <ul class="gh-error-stack-list">
-            {{#foreach errorDetails}}
-            <li>
-                <h5 class="gh-error-stack-function">{{{rule}}}</h5>
-
-                {{#foreach failures}}
-                <span class="gh-error-stack-file"><strong>Ref:</strong> {{ref}}</span><br>
-                <span class="gh-error-stack-file"><strong>Message:</strong> {{message}}</span>
-                {{/foreach}}
-            </li>
+            {{#foreach failures}}
+            <span class="gh-error-stack-file"><strong>Ref:</strong> {{ref}}</span><br>
+            <span class="gh-error-stack-file"><strong>Message:</strong> {{message}}</span>
             {{/foreach}}
-        </ul>
-    </section>
-    {{/if}}
-</article>
+        </li>
+        {{/foreach}}
+    </ul>
+</section>
+{{/if}}
+
+{{#get "posts" filter="tags:hash-pinned" as |pinned|}}
+<div class="py-5">
+    <div class="container">
+        <div class="row">
+            {{#foreach pinned}}
+            {{> "card"}}
+            {{/foreach}}
+        </div>
+    </div>
+</div>
+{{/get}}

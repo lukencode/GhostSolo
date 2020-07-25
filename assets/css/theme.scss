@@ -63,9 +63,24 @@ h4 {
     border-color: transparent;
 }
 
+a.btn:hover {
+    filter: brightness(100%);
+    text-decoration: none;
+}
+
 .btn-secondary {
     background-color: var(--button-color) !important;
     border-color: var(--button-color) !important;
+    color: var(--button-text) !important;
+}
+
+.btn-outline-secondary {
+    border-color: var(--button-color) !important;
+    color: var(--button-color) !important;
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--button-color) !important;
     color: var(--button-text) !important;
 }
 
@@ -80,6 +95,7 @@ a.btn-secondary-inverted:hover {
     border-color: var(--masthead-color) !important;
     color: var(--masthead-color) !important;
     text-decoration: none;
+    filter: brightness(100%);
 }
 
 .text-truncate {
@@ -133,8 +149,10 @@ a.btn-secondary-inverted:hover {
     filter: brightness(60%);
 }
 
-#nav .navbar-toggler:hover {
+#nav .navbar-toggler:hover,
+#nav .navbar-brand:hover {
     filter: brightness(100%);
+    text-decoration: none;
 }
 
 .site-heading {
@@ -241,6 +259,7 @@ a.card.no-image:hover {
     background-color: var(--masthead-color) !important;
     color: var(--masthead-text) !important;
     transition: all 0.5s ease;
+    filter: brightness(100%);
 }
 
 .card.no-image p,
@@ -268,6 +287,10 @@ a.card.no-image:hover {
 .post-date-2021+.post-date-2021 h3,
 .post-date-2022+.post-date-2022 h3 {
     display: none;
+}
+
+.pages-1 {
+    display: none !important;
 }
 
 

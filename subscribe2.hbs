@@ -1,0 +1,21 @@
+{{!< default}}
+
+{{#page}}
+<article class="gh-article {{post_class}} site-content">
+
+    <header class="gh-header gh-canvas">
+        <h1 class="display-5 post-title">{{title}}</h1>
+
+        {{#if @labs.members}}
+        <div class="mt-2">
+            {{> "signup_small"}}
+        </div>
+        {{/if}}
+    </header>
+
+    <div class="gh-content gh-canvas mt-5">
+        {{content}}
+    </div>
+
+</article>
+{{/page}}

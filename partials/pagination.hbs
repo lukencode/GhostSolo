@@ -1,0 +1,16 @@
+
+<nav class="pagination mt-4 d-flex justify-content-between align-items-baseline pages-{{pages}}" role="navigation">
+    {{#if next}}
+        <a class="older-posts btn btn-sm btn-outline-secondary" href="{{page_url next}}">&larr; Older Posts</a>
+    {{else}}
+    <div></div>
+    {{/if}}
+
+    <span class="page-number small text-muted">Page {{page}} of {{pages}}</span>
+
+    {{#if prev}}
+        <a class="newer-posts btn btn-sm btn-outline-secondary" href="{{page_url prev}}">Newer Posts &rarr;</a>
+    {{else}}
+    <div></div>
+    {{/if}}
+</nav>

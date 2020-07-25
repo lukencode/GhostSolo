@@ -43,7 +43,7 @@
 </header>
 
 
-
+{{#is "home"}}
 {{#get "posts" filter="tags:hash-pinned" as |pinned|}}
 <div class="py-5 bg-alternative">
     <div class="container">
@@ -55,7 +55,7 @@
     </div>
 </div>
 {{/get}}
-
+{{/is}}
 
 
 <div class="container my-5">
@@ -76,4 +76,5 @@
         </div>
     </article>
     {{/foreach}}
+    {{pagination}}
 </div>

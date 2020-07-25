@@ -1,0 +1,22 @@
+{{!< default}}
+
+{{#post}}
+<header class="bg-alternative site-heading ">
+    <div class="container">
+    <h1 class="display-5 post-title">{{title}}</h1>
+
+    {{#if excerpt}}
+    <p class="lead mb-0 mt-2">{{excerpt}}</p>
+    {{/if}}
+
+    {{#if @labs.members}}
+    <div class="mt-4" style="max-width: 600px;">
+        {{> "signup_small"}}
+    </div>
+    {{/if}}
+    </div>
+</header>
+    <div class="gh-content gh-canvas mt-5">
+        {{content}}
+    </div>
+{{/post}}
