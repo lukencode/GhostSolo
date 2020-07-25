@@ -2,25 +2,18 @@
 
 name: Create Release
 
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
 on:
   push:
     branches: [ master ]
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest 
     strategy:
       matrix:
         node-version: [12.x]
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
       
     - name: Use Node.js ${{ matrix.node-version }}
@@ -30,31 +23,24 @@ jobs:
     - run: npm install
     - run: npm run zip
     
-    # Outpus to ${{ steps.package-version.outputs.current-version}}
     - name: Package version
       id: package-version
       uses: martinbeentjes/npm-get-version-action@v1.1.0
 
-    - name: Create a Release
+    - name: Create Release
       id: create-release
       uses: actions/create-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:  
-        # The name of the tag. This should come from the webhook payload, `github.GITHUB_REF` when a user pushes a new tag
         tag_name: v${{ steps.package-version.outputs.current-version}}
-        # The name of the release. For example, `Release v1.0.1`
         release_name: ${{ steps.package-version.outputs.current-version}}
         prerelease: true
 
-    - name: Upload a Release Asset
+    - name: Upload Release Asset
       uses: actions/upload-release-asset@v1.0.2
       with:
-        # The URL for uploading assets to the release
         upload_url: ${{ steps.create-release.outputs.upload_url }}
-        # The path to the asset you want to upload
         asset_path: ./dist/GhostSolo_${{ steps.package-version.outputs.current-version}}.zip
-        # The name of the asset you want to upload
         asset_name: GhostSolo_${{ steps.package-version.outputs.current-version}}.zip
-        # The content-type of the asset you want to upload. See the supported Media Types here: https://www.iana.org/assignments/media-types/media-types.xhtml for more information
         asset_content_type: application/zip
