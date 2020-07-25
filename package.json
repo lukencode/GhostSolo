@@ -1,5 +1,5 @@
 {
-    "name": "ghost-solo",
+    "name": "GhostSolo",
     "description": "A theme for solo ghost blogers",
     "demo": "https://lukelowrey.com",
     "version": "1.0.0",
@@ -12,7 +12,7 @@
         "desktop": "assets/screenshot-desktop.jpg"
     },
     "config": {
-        "posts_per_page": 25,
+        "posts_per_page": 5,
         "image_sizes": {
             "xxs": {
                 "width": 30

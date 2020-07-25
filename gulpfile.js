@@ -43,7 +43,7 @@ function css(done) {
         easyimport,
         colorFunction(),
         autoprefixer(),
-        //cssnano()
+        cssnano()
     ];
 
     pump([
@@ -70,7 +70,8 @@ function js(done) {
 
 function zipper(done) {
     var targetDir = 'dist/';
-    var themeName = require('./package.json').name;
+    var package = require('./package.json');
+    var themeName = package.name + "_" + package.version;
     var filename = themeName + '.zip';
 
     pump([
