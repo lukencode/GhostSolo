@@ -167,6 +167,14 @@ Images
     width: 100%;
 }
 
+@media (max-width: 650px) {
+    .kg-embed-card {
+        overflow: auto !important;
+        margin: 0 !important;
+        max-width: 100% !important;
+    }
+}
+
 .kg-image-card img {
     margin: auto;
 }

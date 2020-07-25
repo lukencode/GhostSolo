@@ -42,14 +42,14 @@
                     {{#if @member}}
                         <a class="nav-link" href="javascript:" data-members-signout>Sign out</a>
                     {{else}}
-                        <a class="btn btn-secondary my-2 my-sm-0"  href="javascript:" data-members-signup>Subscribe</a>
+                        <a class="btn btn-secondary my-2 my-sm-0"  href="/subscribe">Subscribe</a>
                     {{/if}}
 
+                    <button id="theme-toggle" class="btn btn-link btn-sm ml-2 small" type="button">
+                        <span class="d-block-light d-none">{{> "icons/moon"}}</span>
+                        <span class="d-block-dark d-none">{{> "icons/sun"}}</span>
+                    </button>
                 </div>
-                <button id="theme-toggle" class="btn btn-link btn-sm ml-2 small" type="button">
-                    <span class="d-block-light d-none">{{> "icons/moon"}}</span>
-                    <span class="d-block-dark d-none">{{> "icons/sun"}}</span>
-                </button>
             </div>
         </nav>
     </header>
