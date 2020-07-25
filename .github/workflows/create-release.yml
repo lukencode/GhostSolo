@@ -31,7 +31,7 @@ jobs:
     - run: npm run zip
     
     # Outpus to ${{ steps.package-version.outputs.current-version}}
-    - name: Get version
+    - name: Package version
       uses: martinbeentjes/npm-get-version-action@v1.1.0
 
     - name: Create a Release
