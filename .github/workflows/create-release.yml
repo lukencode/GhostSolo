@@ -1,5 +1,4 @@
 # Build theme and upload release
-
 name: Create Release
 
 on:
