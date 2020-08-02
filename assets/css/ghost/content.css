@@ -103,7 +103,7 @@ Images
     top: 0;
     bottom: 0;
     width: 0.3rem;
-    background: var(--bs-primary);
+    background: var(--bs-masthead);
 }
 
 @media (max-width: 650px) {
@@ -140,13 +140,15 @@ Images
 .gh-canvas :not(pre) code {
     vertical-align: middle;
     padding: 0.15em 0.4em 0.15em;
-    border: #e1eaef 1px solid;
+    border: var(--alternate-background-colour)f 1px solid;
     font-weight: 400 !important;
     font-size: 0.9em;
     line-height: 1em;
-    color: #dc0050;
-    background: #f0f6f9;
+    background: var(--alternate-background-colour);
     border-radius: 0.25em;
+    max-width: 100%;
+    margin: 0;
+    overflow: auto;
 }
 
 .gh-canvas>pre {
