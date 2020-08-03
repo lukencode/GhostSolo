@@ -52,7 +52,6 @@ img {
 }
 
 [data-theme='dark'] .form-control {
-    // background-color: var(--background-color) !important;
     background-color: rgba(0, 0, 0, 0.6);
     border-color: rgba(0, 0, 0, 0.6);
     color: var(--text-color) !important;
@@ -204,11 +203,22 @@ a.btn-secondary-inverted:hover {
     border-radius: .3125rem;
 }
 
+footer .btn-lg {
+    padding: .5rem 1rem;
+    font-size: 1.1rem;
+}
+
+footer .form-control-lg {
+    font-size: 1.1rem;
+}
+
 @media only screen and (max-width: 600px) {
+    footer .btn-lg,
     .site-heading .btn-lg {
         padding: .5rem 1rem;
         font-size: 1rem;
     }
+    footer .form-control-lg,
     .site-heading .form-control-lg {
         font-size: 1rem;
     }

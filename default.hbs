@@ -62,8 +62,22 @@
 
     <footer class="footer mt-auto py-3 bg-alternative">
         <div class="container">
+            <div class="row">   
+                <div class="col-md-8">                    
+                    {{#if @labs.members}}
+                    <div class="mt-4 mb-3" style="max-width:500px">
+                        <div class="font-weight-bold pb-2 small">SUBCSRIBE</div>
+                        {{> "signup_small"}}
+                    </div>
+                    {{/if}}
+                </div>
+                <div class="col-md-4 my-4">                    
+                    <div class="font-weight-bold pb-1">{{@blog.title}}</div>
+                    <p class="mb-0 small">{{@blog.description}}</p>
+                </div>                
+            </div>
             <div class="row">
-                <div class="col d-flex align-items-center small">
+                <div class="col d-flex align-items-center my-3">
                     <div class="font-weight-bold mr-3">                    
                         {{@site.title}}
                     </div>
