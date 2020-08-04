@@ -12,7 +12,7 @@
         <h1 class="display-5 post-title">{{title}}</h1>
 
         {{#if custom_excerpt}}
-        <p class="lead mb-4 mt-2 text-secondary">{{custom_excerpt}}</p>
+        <p class="lead mb-2 mt-2 text-secondary">{{custom_excerpt}}</p>
         {{/if}}
 
         <hr />
@@ -24,8 +24,7 @@
                 <a href="{{url}}" class="d-block">{{name}}</a>
                 <div class="small text-secondary">
                     <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time>
-                    <span class="bull">&bull;</span> {{reading_time}}
-                    </small>
+                    <span class="d-inline-block pl-3">{{reading_time}}</span>
                 </div>
             </div>
         </div>
