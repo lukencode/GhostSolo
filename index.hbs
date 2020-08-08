@@ -15,8 +15,8 @@
             {{else}}            
                 <div class="site-heading-content col text-center text-lg-left mb-4 mb-lg-0">                    
             {{/if}}
-                    <h1 class="display-3 font-weight-bold">{{@blog.title}}</h1>
-                    <p class="lead mb-0">{{@blog.description}}</p>
+                    <h1 class="display-3 font-weight-bold">{{@site.title}}</h1>
+                    <p class="lead mb-0">{{@site.description}}</p>
 
                     {{#if @labs.members}}
                     <div class="mt-4">
@@ -33,7 +33,7 @@
                 
             {{#if @site.logo}}
                 <div class="col-lg-6 order-lg-2 order-sm-1 order-xs-1 site-heading-image-container">
-                    <img src="{{@site.logo}}" class="mx-auto d-block site-heading-image" alt="{{@blog.title}}">
+                    <img src="{{@site.logo}}" class="mx-auto d-block site-heading-image" alt="{{@site.title}}">
                 </div>
             {{/if}}
         </div>

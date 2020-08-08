@@ -2,7 +2,7 @@
     "name": "ghostsolo",
     "description": "A theme for solo ghost blogers",
     "demo": "https://lukelowrey.com",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "engines": {
         "ghost": ">=3.0.0",
         "ghost-api": "v3"

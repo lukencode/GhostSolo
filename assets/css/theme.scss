@@ -316,8 +316,12 @@ form[data-members-form] .message-error {
     display: none;
 }
 
+form[data-members-form].success .message-success {
+    display: block;
+}
+
 .member-form.success .message-success {
-    display: block !important;
+    display: block;
 }
 
 form[data-members-form].error .message-error {
