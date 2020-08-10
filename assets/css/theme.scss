@@ -141,7 +141,8 @@ a.btn-secondary-inverted:hover {
 }
 
 #nav a.nav-link:hover,
-#nav .btn-link:hover {
+#nav .btn-link:hover,
+#nav a.nav-link.active {
     filter: brightness(100%);
     text-decoration: none;
 }
@@ -161,8 +162,13 @@ a.btn-secondary-inverted:hover {
 .site-heading {
     padding: calc(58px + 4vw) 3vw 6vw;
     background-color: var(--masthead-color);
+    color: var(--masthead-text);
     position: relative;
     /* background: linear-gradient(165deg, var(--masthead-color) 50%, var(--background-color) 50%); */
+}
+
+.site-heading.bg-alternative {
+    color: var(--text-color);
 }
 
 .site-heading-content {

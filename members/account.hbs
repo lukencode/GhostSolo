@@ -1,35 +1,68 @@
 {{!< ../default}}
 
-<div class="gh-page">
-    <div class="gh-container">
+<header class="site-heading bg-alternative">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="site-heading-content col-lg-6 text-center text-lg-left mb-4 mb-lg-0">
+                <h2 class="font-weight-bold">Hi <i>{{@member.email}}</i></h1>
 
-    {{#if @member.paid}}
+                    {{#if @member.paid}}
 
-        {{!-- Logged in, paying member: Show account info --}}
-        <div class="account-box">
-            <h2 class="account-box-title">Nice, you're a subscriber!</h2>
-            <p>Hey! <strong>{{@member.email}}</strong> has an active {{@site.title}} account with access to all areas. You're all set, but if you need any help, get in touch with us and we'd be happy to help.</p>
-        </div>
+                    <p class="lead mb-0">
+                        You have an active <strong>{{@site.title}}</strong> account with access to all areas. You're all
+                        set, but if you need any help, get in touch with us and we'd be happy to help.
+                    </p>
 
-    {{else if @member}}
+                    {{else if @member}}
 
-        {{!-- Logged in, not paying: Link to checkout --}}
-        <div class="account-box">
-            <h1 class="account-box-title">Currently, you're not a subscriber</h1>
-            <p>Hey there! <strong>{{@member.email}}</strong> is subscribed to free updates from {{@site.title}}, but doesn't have a paid subscription to unlock full access.</p>
-            <div class="authbox-signup">
-                <a class="button primary" href="/signup/">
-                    <span class="button-content">Subscribe now</span>
-                </a>
+                    {{#if @price.monthly}}
+                    <p class="lead mb-0">You are subscribed to free updates from <strong>{{@site.title}}</strong>,
+                        but don't have a paid subscription to unlock full access.</p>
+                    <div class="mt-4">
+                        <a href="/signup" class="btn btn-lg btn-secondary">
+                            Subscribe
+                        </a>
+                    </div>
+                    {{else if @price.yearly}}
+                    <p class="lead mb-0">You are subscribed to free updates from <strong>{{@site.title}}</strong>,
+                        but don't have a paid subscription to unlock full access.</p>
+                    <div class="mt-4">
+                        <a href="/signup" class="btn btn-lg btn-secondary">
+                            Subscribe
+                        </a>
+                    </div>
+                    {{else}}
+                    {{! no paid options}}
+                    <p class="lead mb-0">Thanks for subscribing to <strong>{{@site.title}}</strong>.</p>
+                    {{/if}}
+
+                    {{else}}
+
+                    {{!-- Not logged in: Redirect to signin --}}
+                    <script>window.location = '{{@site.url}}/signin/';</script>
+
+                    {{/if}}
             </div>
         </div>
-
-    {{else}}
-
-        {{!-- Not logged in: Redirect to signin --}}
-        <script>window.location = '{{@site.url}}/signin/';</script>
-
-    {{/if}}
-
     </div>
+
+</header>
+
+
+<div class="container mt-5">
+    {{#foreach @member.subscriptions}}
+
+    <p>Name: <strong>{{customer.name}}</strong></p>
+
+    <p>Plan type: <strong>{{plan.nickname}}</strong></p>
+
+    <p>Status: <strong>{{status}}</strong></p>
+
+    {{/foreach}}
+
+    {{#if @member.paid}}
+    <a class="btn btn-secondary" href="javascript:" data-members-edit-billing>
+        Edit billing info
+    </a>
+    {{/if}}
 </div>

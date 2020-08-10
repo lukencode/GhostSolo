@@ -13,7 +13,8 @@ The homepage will render any posts with the internal tag "#pinned" as cards. Tip
 ![Ghost pinned](screenshots/ghost-pinned.png)
 
 ### Membership support
-GhostSolo currently supports free membership. You must **add a page named "Subscribe"** which will be used when people click the subscribe button in the header. The subscribe page will render the exerpt and body content you provide.
+GhostSolo currently supports free membership. You must **upload the routes.yaml fille"** which will be used when people click the subscribe button in the header.
+The paid membership functionality in Ghost *should* be compatible but has not yet been tested in production.
 
 ### Menus
 The standard ghost navigation will render in the nav bar at the top of the page. Secondary navigation will render in the footer.
@@ -23,6 +24,25 @@ The site twitter and facebook (soon) links will render as buttons in the homepag
 
 ### Author profile
 The author profile bio and twitter will render at the end of each post.
+
+# Upload routes.yaml
+To enable the membership functionality you will need to upload the routes.yaml file located in GhostSolo.zip to your Ghost site (Settings > Labs > Routes).
+
+```yaml
+routes:
+  /signup/: members\signup
+  /signin/: members\signin
+  /account/: members\account
+
+collections:
+  /:
+    permalink: /{slug}/
+    template: index
+
+taxonomies:
+  tag: /tag/{slug}/
+  author: /author/{slug}/
+```
 
 # Customise
 

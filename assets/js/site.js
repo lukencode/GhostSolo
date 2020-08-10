@@ -26,7 +26,6 @@ if (toggle) {
 }
 
 function switchTweetTheme(currentTheme, targetTheme) {
-    console.log(currentTheme + " - " + targetTheme)
     var tweets = document.querySelectorAll('[data-tweet-id]');
 
     tweets.forEach(function(tweet) {
