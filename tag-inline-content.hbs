@@ -1,0 +1,82 @@
+{{!< default}}
+
+
+
+{{#tag}}
+{{#if feature_image}}
+<header class="site-heading" style="background-image:url('{{img_url feature_image size="xl"}}')">
+    <div class="overlay"></div>
+    {{else}}
+    <header class="site-heading bg-alternative">
+        {{/if}}
+
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="site-heading-content col-lg-8 text-center text-lg-left mb-4 mb-lg-0">
+                    <h1 class="font-weight-bold">{{name}}</h1>
+
+                    <p class="lead mb-0">
+                        {{#if description}}
+                        {{description}}
+                        {{else}}
+                        A collection of {{plural ../pagination.total empty='posts' singular='% post' plural='% posts'}}
+                        {{/if}}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    {{/tag}}
+
+    <div class="container my-5">
+        {{#foreach posts}}
+        <article class="mb-5">
+            <div class="row">
+                <div class="col-lg-3 col-xl-2 col-md-12 text-secondary pt-1 pb-3 small">
+                    {{date format="MMM D, YYYY"}}
+                </div>
+                <div class="col pb-4">
+
+                    {{#if feature_image}}
+                    <img class="mb-4 img-responsive rounded" srcset="{{img_url feature_image size="s"}} 300w,
+                                    {{img_url feature_image size="m"}} 600w,
+                                    {{img_url feature_image size="l"}} 1000w,
+                                    {{img_url feature_image size="xl"}} 2000w"
+                        sizes="(max-width: 1000px) 1000px, 2000px" loading="lazy"
+                        src="{{img_url feature_image size="xl"}}" alt="{{title}}" />
+                    {{/if}}
+
+                    <a href="{{url}}" class="text-reset">
+                        <h2 class="h4">
+                            {{title}}
+                        </h2>
+                    </a>
+
+                    {{#if custom_excerpt}}
+                    <p class="small text-secondary">{{custom_excerpt}}</p>
+                    {{/if}}
+
+                    <div class="gh-canvas no-grid">
+                        {{content}}
+                    </div>
+
+                    <div class="mt-4 small d-flex flex-wrap">
+                        <a href="{{url}}" class="pr-3 d-flex align-items-center">
+                            {{> "icons/link"}}
+                            <span class="pl-1">Permalink</span>
+                        </a>
+
+                        <a class="d-flex align-items-center"
+                            href="https://twitter.com/share?text={{encode title}}&url={{encode url absolute='true'}}">
+                            {{> "icons/twitter"}}
+                            <span class="pl-1">Share</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr />
+        </article>
+        {{/foreach}}
+    </div>

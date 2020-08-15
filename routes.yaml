@@ -7,6 +7,12 @@ collections:
   /:
     permalink: /{slug}/
     template: index
+    filter: 'tag:-note'    
+  /notes/:
+    permalink: /{slug}/
+    template: tag-inline-content
+    filter: 'tag:note'  
+    data: tag.note
 
 taxonomies:
   tag: /tag/{slug}/

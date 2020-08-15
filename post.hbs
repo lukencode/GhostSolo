@@ -45,6 +45,21 @@
     </div>
 
     <footer class="gh-footer gh-canvas">
+        
+
+        <div class=" mt-4 small d-flex flex-wrap">
+            <a class="d-flex align-items-center mr-3 font-weight-bold"
+                href="https://twitter.com/share?text={{encode title}}&url={{encode url absolute='true'}}">
+                {{> "icons/twitter"}}
+                <span class="pl-1">Share</span>
+            </a>
+            
+            <span class="d-flex align-items-center text-secondary">
+                <span class="pr-1">{{> "icons/tag"}}</span>
+                {{tags}}
+            </a>
+
+        </div>
 
         {{#primary_author}}
         <div class="author d-flex bg-alternative rounded p-4 mt-4">
@@ -69,11 +84,8 @@
         </div>
         {{/primary_author}}
 
-        {{!--
-        <section class="gh-post-comments">
-            If you want to embed comments, this is a good place to do it!
+        <section id="comments">
         </section>
-        --}}
 
     </footer>
 
