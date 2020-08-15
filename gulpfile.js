@@ -69,7 +69,7 @@ function js(done) {
 }
 
 function zipper(done) {
-    var targetDir = 'dist/';
+    var targetDir = '';
     var package = require('./package.json');
     var themeName = package.name;
     var filename = themeName + '.zip';
