@@ -40,6 +40,6 @@ jobs:
       uses: actions/upload-release-asset@v1.0.2
       with:
         upload_url: ${{ steps.create-release.outputs.upload_url }}
-        asset_path: ./GhostSolo.zip
+        asset_path: /home/runner/work/GhostSolo//GhostSolo.zip
         asset_name: GhostSolo.zip
         asset_content_type: application/zip
