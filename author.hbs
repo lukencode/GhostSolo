@@ -9,11 +9,11 @@
                 <div class="d-flex flex-wrap">
                     {{#if profile_image}}
                     <img loading="lazy" src="{{img_url profile_image  size="l"}}" alt="{{name}}"
-                        class="avatar avatar-xl mr-3 d-none d-lg-block" />
+                        class="avatar avatar-xl me-3 d-none d-lg-block" />
                     {{/if}}
 
                     <div>
-                        <h1 class="font-weight-bold">{{name}}</h1>
+                        <h1 class="fw-bold">{{name}}</h1>
                         {{#if bio}}
                         <p class="lead mb-0">
                             {{bio}}
@@ -42,12 +42,12 @@
     {{#foreach posts}}
     <article class="post">
         <div class="d-flex align-items-baseline mb-2 pb-1">
-            <div class="text-secondary text-right mr-2 col-auto d-md-block d-none" style="width:120px">
+            <div class="text-secondary text-right me-2 col-auto d-md-block d-none" style="width:120px">
                 {{#if featured}}⭐{{/if}} {{date format="MMM D, YYYY"}}</div>
 
             <div class="col">
                 <a href="{{url}}" class="d-flex">
-                    <h2 class="h5 font-weight-normal mb-0">
+                    <h2 class="h5 fw-normal mb-0">
                         {{title}}
                     </h2>
                 </a>

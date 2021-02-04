@@ -6,7 +6,7 @@
 
     <header class="gh-header gh-canvas">
         {{#primary_tag}}
-        <a href="{{url}}" class="d-inline-block py-1 mt-2 small font-weight-bold text-uppercase">{{name}}</a>
+        <a href="{{url}}" class="d-inline-block py-1 mt-2 small fw-bold text-uppercase">{{name}}</a>
         {{/primary_tag}}
 
         <h1 class="display-5 post-title">{{title}}</h1>
@@ -19,12 +19,12 @@
 
         {{#primary_author}}
         <div class="author d-flex">
-            <img loading="lazy" src="{{img_url profile_image  size="m"}}" alt="{{name}}" class="avatar mr-2" />
+            <img loading="lazy" src="{{img_url profile_image  size="m"}}" alt="{{name}}" class="avatar me-2" />
             <div>
                 <a href="{{url}}" class="d-block">{{name}}</a>
                 <div class="small text-secondary">
                     <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time>
-                    <span class="d-inline-block pl-3">{{reading_time}}</span>
+                    <span class="d-inline-block ps-3">{{reading_time}}</span>
                 </div>
             </div>
         </div>
@@ -48,14 +48,14 @@
         
 
         <div class=" mt-4 small d-flex flex-wrap">
-            <a class="d-flex align-items-center mr-3 font-weight-bold"
+            <a class="d-flex align-items-center me-3 fw-bold"
                 href="https://twitter.com/share?text={{encode title}}&url={{encode url absolute='true'}}">
                 {{> "icons/twitter"}}
-                <span class="pl-1">Share</span>
+                <span class="ps-1">Share</span>
             </a>
             
             <span class="d-flex align-items-center text-secondary">
-                <span class="pr-1">{{> "icons/tag"}}</span>
+                <span class="pe-1">{{> "icons/tag"}}</span>
                 {{tags}}
             </a>
 
@@ -64,9 +64,9 @@
         {{#primary_author}}
         <div class="author d-flex bg-alternative rounded p-4 mt-4">
             <img loading="lazy" src="{{img_url profile_image  size="l"}}" alt="{{name}}"
-                class="avatar avatar-lg mr-3" />
+                class="avatar avatar-lg me-3" />
             <div>
-                <a href="{{url}}" class="d-block font-weight-bold">{{name}}</a>
+                <a href="{{url}}" class="d-block fw-bold">{{name}}</a>
 
                 {{#if bio}}
                 <small class="mt-1">{{bio}}</small>

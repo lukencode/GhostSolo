@@ -20,34 +20,26 @@
     <header>
         <nav id="nav" class="navbar navbar-expand-md fixed-top navbar-light">
             <div class="container">
-
-                {{^is "home"}}
-                <a class="navbar-brand" href="{{@site.url}}">                    
-                    {{@site.title}}
-                </a>
-                {{else}}
-                <div></div>
-                {{/is}}
-
+                    {{^is "home"}}
+                    <a class="navbar-brand" href="{{@site.url}}">                    
+                        {{@site.title}}
+                    </a>
+                    {{else}}
+                    <div></div>
+                    {{/is}}
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content"
                     aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation" data-toggle="collapse">
                     {{> "icons/menu"}}
                 </button>
 
-                <div class="collapse navbar-collapse" id="nav-content">
+
+
+                <div class="collapse navbar-collapse " id="nav-content">
+
+
                     {{navigation}}
 
-                    {{#if @member.paid}}
-                        <a class="nav-link" href="/account">Account</a>
-                    {{/if}}
-
-                    {{#if @member}}
-                        <a class="nav-link" href="javascript:" data-members-signout>Sign out</a>
-                    {{else}}
-                        <a class="btn btn-secondary my-2 my-sm-0"  href="/signup">Subscribe</a>
-                    {{/if}}
-
-                    <button id="theme-toggle" class="btn btn-link btn-sm ml-2 small" type="button">
+                    <button id="theme-toggle" class="btn btn-link btn-sm ms-2 small d-flex" type="button">
                         <span class="d-block-light d-none">{{> "icons/moon"}}</span>
                         <span class="d-block-dark d-none">{{> "icons/sun"}}</span>
                     </button>
@@ -66,26 +58,26 @@
                 <div class="col-md-8">                    
                     {{#if @labs.members}}
                     <div class="mt-4 mb-3" style="max-width:500px">
-                        <div class="font-weight-bold pb-2 small">SUBSCRIBE</div>
+                        <div class="fw-bold pb-2 small">SUBSCRIBE</div>
                         {{> "signup_small"}}
                     </div>
                     {{/if}}
                 </div>
                 <div class="col-md-4 my-4">                    
-                    <div class="font-weight-bold pb-1">{{@site.title}}</div>
+                    <div class="fw-bold pb-1">{{@site.title}}</div>
                     <p class="mb-0 small">{{@site.description}}</p>
                 </div>                
             </div>
             <div class="row">
                 <div class="col col-xs-12 d-flex flex-wrap align-items-center my-3">
-                    <div class="font-weight-bold mr-3">                    
+                    <div class="fw-bold me-3">                    
                         {{@site.title}}
                     </div>
                     {{navigation type="secondary"}}
                 </div>
                 <div class="col-auto d-flex d-flex align-items-center small text-secondary">
                     <span>Published with Ghost & </span> 
-                    <a href="https://lukelowrey.com/ghostsolo" class="pl-1">GhostSolo</a>
+                    <a href="https://lukelowrey.com/ghostsolo" class="ps-1">GhostSolo</a>
                 </div>
             </div>
         </div>

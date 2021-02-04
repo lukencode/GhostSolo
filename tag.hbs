@@ -12,8 +12,8 @@
 
     <div class="container">
         <div class="row align-items-center">
-            <div class="site-heading-content col-lg-6 text-center text-lg-left mb-4 mb-lg-0">
-                <h1 class="font-weight-bold">{{name}}</h1>
+            <div class="site-heading-content col-lg-6 text-center text-lg-start mb-4 mb-lg-0">
+                <h1 class="fw-bold">{{name}}</h1>
 
                 <p class="lead mb-0">
                     {{#if description}}
@@ -36,12 +36,12 @@
     {{#foreach posts}}
     <article class="post">
         <div class="d-flex align-items-baseline mb-2 pb-1">
-            <div class="text-secondary text-right mr-2 col-auto d-md-block d-none" style="width:120px">
+            <div class="text-secondary text-right me-2 col-auto d-md-block d-none" style="width:120px">
                 {{#if featured}}⭐{{/if}} {{date format="MMM D, YYYY"}}</div>
 
             <div class="col">
                 <a href="{{url}}" class="d-flex">
-                    <h2 class="h5 font-weight-normal mb-0">
+                    <h2 class="h5 fw-normal mb-0">
                         {{title}}
                     </h2>
                 </a>
