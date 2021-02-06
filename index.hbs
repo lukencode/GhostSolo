@@ -63,12 +63,12 @@
     <article class="post post-date-{{date format="YYYY"}}">
         <h3 class="mt-4 mb-3">{{date format="YYYY"}}</h3>
         <div class="d-flex align-items-baseline mb-2 pb-1">
-            <div class="text-secondary text-right me-2 col-auto d-md-block d-none" style="width:85px">{{#if featured}}⭐{{/if}} {{date format="MMM D"}}</div>
+            <div class="text-secondary text-right me-2 col-auto d-md-block d-none" style="width:80px">{{date format="MMM D"}}</div>
             
             <div class="col">
             <a href="{{url}}" class="d-flex">
                 <h2 class="h5 fw-normal mb-0">
-                    {{title}}
+                   {{#if featured}}⭐{{/if}} {{title}}
                 </h2>
             </a>
 

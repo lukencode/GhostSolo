@@ -37,12 +37,12 @@
     <article class="post">
         <div class="d-flex align-items-baseline mb-2 pb-1">
             <div class="text-secondary text-right me-2 col-auto d-md-block d-none" style="width:120px">
-                {{#if featured}}⭐{{/if}} {{date format="MMM D, YYYY"}}</div>
+                 {{date format="MMM D YYYY"}}</div>
 
             <div class="col">
                 <a href="{{url}}" class="d-flex">
                     <h2 class="h5 fw-normal mb-0">
-                        {{title}}
+                        {{#if featured}}⭐{{/if}} {{title}}
                     </h2>
                 </a>
             </div>
