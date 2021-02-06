@@ -92,6 +92,15 @@ a.btn-secondary-inverted:hover {
     filter: brightness(100%);
 }
 
+#search {
+    -webkit-filter: brightness(80%);
+    filter: brightness(80%);
+    &:hover {
+        -webkit-filter: brightness(100%);
+        filter: brightness(100%);
+    }
+}
+
 .text-truncate {
     overflow: hidden;
     text-overflow: ellipsis;

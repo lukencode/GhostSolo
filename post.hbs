@@ -17,18 +17,19 @@
 
         <hr />
 
-        {{#primary_author}}
         <div class="author d-flex">
+            {{#primary_author}}
             <img loading="lazy" src="{{img_url profile_image  size="m"}}" alt="{{name}}" class="avatar me-2" />
             <div>
                 <a href="{{url}}" class="d-block">{{name}}</a>
+            {{/primary_author}}
+        
                 <div class="small text-secondary">
                     <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time>
-                    <span class="d-inline-block ps-3">{{reading_time}}</span>
-                </div>
+                    <span class="d-inline-block"> - {{reading_time}}</span>  
+                </div> 
             </div>
         </div>
-        {{/primary_author}}
 
         {{#if feature_image}}
         <img class="gh-feature-image rounded" srcset="{{img_url feature_image size="s"}} 300w,
