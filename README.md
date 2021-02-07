@@ -13,8 +13,11 @@ The homepage will render any posts with the internal tag "#pinned" as cards. Tip
 ![Ghost pinned](screenshots/ghost-pinned.png)
 
 ### Membership support
-GhostSolo currently supports free membership. You must **upload the routes.yaml fille"** which will be used when people click the subscribe button in the header.
-The paid membership functionality in Ghost *should* be compatible but has not yet been tested in production.
+
+GhostSolo recommends you use the [Portal](https://ghost.org/changelog/portal/) functionality to handle membership. If membership is enabled the home page and footer will render a sign up form.
+
+You can also update routes.yaml and use the (legacy) ghost solo membership pages.GhostSolo currently supports free membership. You must **upload the routes.yaml fille"** which will be used when people click the subscribe button in the header.
+
 
 ### Menus
 The standard ghost navigation will render in the nav bar at the top of the page. Secondary navigation will render in the footer.
@@ -25,23 +28,43 @@ The site twitter and facebook (soon) links will render as buttons in the homepag
 ### Author profile
 The author profile bio and twitter will render at the end of each post.
 
+### Inline post content tag template
+GhostSolo supports an inline content version of the tag template "tag-inline-content". It will enabled a view where posts for a tag content displays in the list. I use it for short snippets on luklowrey.com but it could be useful for changelogs an other things. To enabled it you need to change th routes.yaml of your blog (see below).
+
+### Table of contents post template
+To enabled a table of contents us the Table of Contents template when writing your post. The contents will update based on headings.
+
 # Upload routes.yaml
 To enable the membership functionality you will need to upload the routes.yaml file located in GhostSolo.zip to your Ghost site (Settings > Labs > Routes).
 
 ```yaml
-routes:
-  /signup/: members\signup
-  /signin/: members\signin
-  /account/: members\account
-
 collections:
   /:
     permalink: /{slug}/
     template: index
 
+#example of using the 'tag-inline-content' template for posts tagged "note" but none other
+  /:
+    permalink: /{slug}/
+    template: index
+    filter: 'tag:-note'    
+  /notes/:
+    permalink: /{slug}/
+    template: tag-inline-content
+    filter: 'tag:note'  
+    data: tag.note
+
 taxonomies:
   tag: /tag/{slug}/
   author: /author/{slug}/
+
+
+#not recommended, use ghost Portal functionality
+routes:
+  /signup/: members\signup
+  /signin/: members\signin
+  /account/: members\account
+
 ```
 
 # Customise
