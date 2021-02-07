@@ -4,6 +4,8 @@
 .gh-canvas {
     display: grid;
     grid-template-columns: [full-start] minmax(calc(calc(100% - 1200px) / 2), 1fr) [wide-start] auto [main-start] 820px [main-end] auto [wide-end] minmax(calc(calc(100% - 1200px) / 2), 1fr) [full-end];
+    max-width: 100% !important;
+    overflow-x: auto;
 }
 
 .gh-canvas.no-grid {
@@ -87,6 +89,15 @@ Images
     padding-left: 1.9em;
 }
 
+@media (max-width: 650px) {
+    .gh-content>ul,
+    .gh-content>ol,
+    .gh-content>dl {
+        max-width: 100%;
+        padding-left: 1.2em;
+    }
+}
+
 .gh-content hr {
     margin-top: 6vmin;
 }
@@ -135,6 +146,7 @@ Images
     font-weight: 600;
     font-size: 1.3rem;
     line-height: 1.4em;
+    color: var(--text-color-light);
 }
 
 .kg-card figcaption strong {
@@ -179,7 +191,8 @@ Images
 }
 
 @media (max-width: 650px) {
-    .kg-embed-card {
+    .kg-embed-card,
+    .kg-card {
         overflow: auto !important;
         margin: 0 !important;
         max-width: 100% !important;

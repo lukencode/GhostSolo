@@ -20,15 +20,15 @@
     <header>
         <nav id="nav" class="navbar navbar-expand-md fixed-top navbar-light">
             <div class="container">
-                    {{^is "home"}}
-                    <a class="navbar-brand" href="{{@site.url}}">                    
-                        {{@site.title}}
-                    </a>
-                    {{else}}
-                    <div></div>
-                    {{/is}}
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content"
-                    aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation" data-toggle="collapse">
+                {{^is "home"}}
+                <a class="navbar-brand" href="{{@site.url}}">                    
+                    {{@site.title}}
+                </a>
+                {{else}}
+                <div></div>
+                {{/is}}
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-content"
+                    aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
                     {{> "icons/menu"}}
                 </button>
 
@@ -39,8 +39,8 @@
 
                     {{navigation}}
 
-                    {{!-- <button id="search" class="btn btn-secondary-inverted btn-sm small d-flex" type="button"> --}}
-                        {{!-- {{> "icons/search"}}  --}}
+                    {{!-- <button id="search" class="btn btn-secondary-inverted btn-sm small d-flex" type="button">  --}}
+                        {{!-- {{> "icons/search"}} --}}
                         {{!-- <span class="d-inline-block ps-1">Search</span> --}}
                     {{!-- </button> --}}
 
