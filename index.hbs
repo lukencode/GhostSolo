@@ -11,11 +11,11 @@
     <div class="container">
         <div class="row align-items-center">
             {{#if @site.logo}}
-                <div class="site-heading-content col-lg-6 text-center text-lg-left mb-4 mb-lg-0 order-1 order-sm-2 order-xs-2">                    
+                <div class="site-heading-content col-lg-6 text-center text-lg-start mb-4 mb-lg-0 order-1 order-sm-2 order-xs-2">                    
             {{else}}            
-                <div class="site-heading-content col text-center text-lg-left mb-4 mb-lg-0">                    
+                <div class="site-heading-content col text-center text-lg-start mb-4 mb-lg-0">                    
             {{/if}}
-                    <h1 class="display-3 font-weight-bold">{{@site.title}}</h1>
+                    <h1 class="display-3 fw-bold">{{@site.title}}</h1>
                     <p class="lead mb-0">{{@site.description}}</p>
 
                     {{#if @labs.members}}
@@ -26,7 +26,7 @@
                     
                     {{#if @site.twitter}}
                     <div class="my-3">
-                        <a href="https://twitter.com/{{@site.twitter}}" class="btn btn-sm btn-secondary-inverted mr-2">{{> "icons/twitter"}} Follow {{@site.twitter}}</a>
+                        <a href="https://twitter.com/{{@site.twitter}}" class="btn btn-sm btn-secondary-inverted me-2">{{> "icons/twitter"}} Follow {{@site.twitter}}</a>
                     </div>
                     {{/if}}
                 </div>
@@ -63,12 +63,12 @@
     <article class="post post-date-{{date format="YYYY"}}">
         <h3 class="mt-4 mb-3">{{date format="YYYY"}}</h3>
         <div class="d-flex align-items-baseline mb-2 pb-1">
-            <div class="text-secondary text-right mr-2 col-auto d-md-block d-none" style="width:85px">{{#if featured}}⭐{{/if}} {{date format="MMM D"}}</div>
+            <div class="text-secondary text-right me-2 col-auto d-md-block d-none" style="width:80px">{{date format="MMM D"}}</div>
             
             <div class="col">
             <a href="{{url}}" class="d-flex">
-                <h2 class="h5 font-weight-normal mb-0">
-                    {{title}}
+                <h2 class="h5 fw-normal mb-0">
+                   {{#if featured}}⭐{{/if}} {{title}}
                 </h2>
             </a>
 

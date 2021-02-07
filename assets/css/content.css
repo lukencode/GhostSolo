@@ -161,9 +161,14 @@ Images
     background-color: var(--alternate-background-colour);
     color: var(--text-colour);
     border-radius: 5px;
-    grid-column: wide-start/wide-end;
     width: 100%;
     margin: 6vmin 0 0;
+}
+
+@media (min-width: 1440px) {
+    .gh-canvas>pre {
+        grid-column: wide-start/wide-end;
+    }
 }
 
 .kg-embed-card {
@@ -233,7 +238,7 @@ Images
     flex-wrap: wrap;
     flex-direction: row-reverse;
     color: currentColor;
-    background: rgba(255, 255, 255, 0.6);
+    background-color: var(--alternate-background-colour)!important;
     font-family: var(--bs-font-sans-serif);
     text-decoration: none;
     border-radius: 5px;
@@ -250,20 +255,18 @@ Images
 
 .kg-bookmark-title {
     font-weight: 600;
-    font-size: 1.5rem;
-    line-height: 1.3em;
+    font-size: 1.3rem;
+    line-height: 1.1em;
 }
 
 .kg-bookmark-description {
-    display: -webkit-box;
-    max-height: 45px;
+    display: flex !important;
     margin: 0.5em 0 0 0;
-    font-size: 1.4rem;
-    line-height: 1.55em;
+    font-size: 0.95rem;
     overflow: hidden;
     opacity: 0.8;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
+    align-items: stretch;
+    overflow: auto;
 }
 
 .kg-bookmark-metadata {
@@ -274,8 +277,8 @@ Images
     display: flex;
     align-items: center;
     font-weight: 500;
-    font-size: 1.3rem;
-    line-height: 1.3em;
+    font-size: 1.1rem;
+    line-height: 1.1em;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

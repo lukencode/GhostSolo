@@ -92,6 +92,15 @@ a.btn-secondary-inverted:hover {
     filter: brightness(100%);
 }
 
+#search {
+    -webkit-filter: brightness(80%);
+    filter: brightness(80%);
+    &:hover {
+        -webkit-filter: brightness(100%);
+        filter: brightness(100%);
+    }
+}
+
 .text-truncate {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -302,6 +311,25 @@ a.card.no-image:hover {
 
 .pages-1 {
     display: none !important;
+}
+
+.toc {
+    grid-column: 5;
+    top: 80px;
+    height: 0;
+    overflow: visible !important;
+    .is-active-link {
+        color: var(--text-color)!important;
+        &::before {
+            background-color: var(--link-color) !important;
+        }
+    }
+    .toc-link {
+        color: var(--text-color-light);
+        &::before {
+            background-color: var(--alternate-background-colour);
+        }
+    }
 }
 
 

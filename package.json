@@ -2,7 +2,7 @@
     "name": "ghostsolo",
     "description": "A theme for solo ghost blogers",
     "demo": "https://lukelowrey.com",
-    "version": "0.4.2",
+    "version": "0.5.0",
     "engines": {
         "ghost": ">=3.0.0",
         "ghost-api": "v3"
@@ -68,11 +68,13 @@
         "url": "https://github.com/lukencode/ghostsolo.git"
     },
     "bugs": "https://github.com/lukencode/ghostsolo/issues",
-    "contributors": ["https://github.com/lukencode/ghostsolo/graphs/contributors"],
+    "contributors": [
+        "https://github.com/lukencode/ghostsolo/graphs/contributors"
+    ],
     "devDependencies": {
         "autoprefixer": "9.8.0",
         "cssnano": "4.1.10",
-        "gscan": "3.5.4",
+        "gscan": "3.6.1",
         "gulp": "4.0.2",
         "gulp-livereload": "4.0.2",
         "gulp-postcss": "8.0.0",
@@ -92,6 +94,6 @@
         "defaults"
     ],
     "dependencies": {
-        "bootstrap": "^5.0.0-alpha1"
+        "bootstrap": "^5.0.0-beta1"
     }
 }

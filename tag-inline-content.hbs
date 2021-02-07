@@ -12,8 +12,8 @@
 
         <div class="container">
             <div class="row align-items-center">
-                <div class="site-heading-content col-lg-8 text-center text-lg-left mb-4 mb-lg-0">
-                    <h1 class="font-weight-bold">{{name}}</h1>
+                <div class="site-heading-content col-lg-8 text-center text-lg-start mb-4 mb-lg-0">
+                    <h1 class="fw-bold">{{name}}</h1>
 
                     <p class="lead mb-0">
                         {{#if description}}
@@ -63,15 +63,15 @@
                     </div>
 
                     <div class="mt-4 small d-flex flex-wrap">
-                        <a href="{{url}}" class="pr-3 d-flex align-items-center">
+                        <a href="{{url}}" class="pe-3 d-flex align-items-center">
                             {{> "icons/link"}}
-                            <span class="pl-1">Permalink</span>
+                            <span class="ps-1">Permalink</span>
                         </a>
 
                         <a class="d-flex align-items-center"
                             href="https://twitter.com/share?text={{encode title}}&url={{encode url absolute='true'}}">
                             {{> "icons/twitter"}}
-                            <span class="pl-1">Share</span>
+                            <span class="ps-1">Share</span>
                         </a>
                     </div>
                 </div>

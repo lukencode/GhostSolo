@@ -1,9 +1,9 @@
 {{#if isSecondary}}
     {{#foreach navigation}}
-    <a class="mr-3" href="{{url absolute="true"}}">{{label}}</a>
+    <a class="me-3" href="{{url absolute="true"}}">{{label}}</a>
     {{/foreach}}
 {{else}}
-<ul class="navbar-nav mr-auto mb-2 mb-md-0" role="menu">
+<ul class="navbar-nav me-auto mb-md-0" role="menu">
     {{#foreach navigation}}
     <li class="{{link_class for=(url) class=(concat "nav-item nav-" slug)}}" role="menuitem">
         <a class="nav-link {{#if current}} active {{/if}}" href="{{url absolute="true"}}">{{label}}</a>

@@ -1,0 +1,110 @@
+{{!< default}}
+
+{{#post}}
+
+<article class="gh-article {{post_class}} site-content">
+
+    <header class="gh-header gh-canvas">
+        {{#primary_tag}}
+        <a href="{{url}}" class="d-inline-block py-1 mt-2 small fw-bold text-uppercase">{{name}}</a>
+        {{/primary_tag}}
+
+        <h1 class="display-5 post-title">{{title}}</h1>
+
+        {{#if custom_excerpt}}
+        <p class="lead mb-2 mt-2 text-secondary">{{custom_excerpt}}</p>
+        {{/if}}
+
+        <hr />
+
+        <div class="author d-flex">
+            {{#primary_author}}
+            <img loading="lazy" src="{{img_url profile_image  size="m"}}" alt="{{name}}" class="avatar me-2" />
+            <div>
+                <a href="{{url}}" class="d-block">{{name}}</a>
+            {{/primary_author}}
+        
+                <div class="small text-secondary">
+                    <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time>
+                    <span class="d-inline-block"> - {{reading_time}}</span>  
+                </div> 
+            </div>
+        </div>
+
+        {{#if feature_image}}
+        <img class="gh-feature-image rounded" srcset="{{img_url feature_image size="s"}} 300w,
+                        {{img_url feature_image size="m"}} 600w,
+                        {{img_url feature_image size="l"}} 1000w,
+                        {{img_url feature_image size="xl"}} 2000w" sizes="(max-width: 1000px) 1000px, 2000px"
+            loading="lazy" src="{{img_url feature_image size="xl"}}" alt="{{title}}" />
+        {{/if}}
+
+    </header>
+
+    <div class="gh-content gh-canvas mt-5">
+        <div class="toc ps-lg-4 sticky-lg-top d-none d-xl-block"></div>
+        {{content}}
+    </div>
+
+    <footer class="gh-footer gh-canvas">
+        
+
+        <div class=" mt-4 small d-flex flex-wrap">
+            <a class="d-flex align-items-center me-3 fw-bold"
+                href="https://twitter.com/share?text={{encode title}}&url={{encode url absolute='true'}}">
+                {{> "icons/twitter"}}
+                <span class="ps-1">Share</span>
+            </a>
+            
+            <span class="d-flex align-items-center text-secondary">
+                <span class="pe-1">{{> "icons/tag"}}</span>
+                {{tags}}
+            </a>
+
+        </div>
+
+        {{#primary_author}}
+        <div class="author d-flex bg-alternative rounded p-4 mt-4">
+            <img loading="lazy" src="{{img_url profile_image  size="l"}}" alt="{{name}}"
+                class="avatar avatar-lg me-3" />
+            <div>
+                <a href="{{url}}" class="d-block fw-bold">{{name}}</a>
+
+                {{#if bio}}
+                <small class="mt-1">{{bio}}</small>
+                {{/if}}
+
+                {{#if twitter}}
+                <div class="mt-2">
+                    <a href="https://twitter.com/{{twitter}}?ref_src=twsrc%5Etfw" class="twitter-follow-button"
+                        data-size="large" data-dnt="true" data-show-count="false">Follow @{{twitter}}</a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+                {{/if}}
+
+            </div>
+        </div>
+        {{/primary_author}}
+
+        <section id="comments">
+        </section>
+
+    </footer>
+
+</article>
+
+{{/post}}
+
+
+<!-- table of contents -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.css" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js" crossorigin="anonymous"></script>
+
+<script>
+    tocbot.init({
+        tocSelector: '.toc',
+        contentSelector: '.gh-content',
+        hasInnerContainers: true,
+        scrollSmoothDuration: 210
+    });
+</script>
