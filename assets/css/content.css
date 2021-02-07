@@ -161,9 +161,14 @@ Images
     background-color: var(--alternate-background-colour);
     color: var(--text-colour);
     border-radius: 5px;
-    grid-column: wide-start/wide-end;
     width: 100%;
     margin: 6vmin 0 0;
+}
+
+@media (min-width: 1440px) {
+    .gh-canvas>pre {
+        grid-column: wide-start/wide-end;
+    }
 }
 
 .kg-embed-card {

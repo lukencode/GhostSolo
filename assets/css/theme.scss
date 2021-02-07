@@ -313,6 +313,25 @@ a.card.no-image:hover {
     display: none !important;
 }
 
+.toc {
+    grid-column: 5;
+    top: 80px;
+    height: 0;
+    overflow: visible !important;
+    .is-active-link {
+        color: var(--text-color)!important;
+        &::before {
+            background-color: var(--link-color) !important;
+        }
+    }
+    .toc-link {
+        color: var(--text-color-light);
+        &::before {
+            background-color: var(--alternate-background-colour);
+        }
+    }
+}
+
 
 /*  Members */
 
