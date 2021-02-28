@@ -107,23 +107,13 @@ Images
 
 .gh-content blockquote {
     position: relative;
-    font-style: italic;
-}
-
-.gh-content blockquote::before {
-    content: "";
-    position: absolute;
-    left: -1.5em;
-    top: 0;
-    bottom: 0;
-    width: 0.3rem;
-    background: var(--bs-masthead);
-}
-
-@media (max-width: 650px) {
-    .gh-content blockquote::before {
-        left: -4vmin;
-    }
+    background: var(--alternate-background-colour);
+    padding: 1.5rem;
+    border-left: 5px solid var(--accent-color);
+    margin: 0;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    font-style: normal;
 }
 
 
@@ -155,7 +145,7 @@ Images
 .gh-canvas :not(pre) code {
     vertical-align: middle;
     padding: 0.15em 0.4em 0.15em;
-    border: var(--alternate-background-colour) 1px solid;
+    /* border: var(--alternate-background-colour) 1px solid; */
     font-weight: 400 !important;
     font-size: 0.9em;
     line-height: 1em;
@@ -165,7 +155,9 @@ Images
     overflow: auto;
 }
 
-.gh-canvas .kg-code-card code {}
+.gh-canvas .kg-code-card code {
+    border: 0;
+}
 
 .gh-canvas>pre {
     overflow: auto;
