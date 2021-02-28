@@ -5,7 +5,6 @@
     display: grid;
     grid-template-columns: [full-start] minmax(calc(calc(100% - 1200px) / 2), 1fr) [wide-start] auto [main-start] 820px [main-end] auto [wide-end] minmax(calc(calc(100% - 1200px) / 2), 1fr) [full-end];
     max-width: 100% !important;
-    overflow-x: auto;
 }
 
 .gh-canvas.no-grid {
@@ -156,21 +155,21 @@ Images
 .gh-canvas :not(pre) code {
     vertical-align: middle;
     padding: 0.15em 0.4em 0.15em;
-    border: var(--alternate-background-colour)f 1px solid;
+    border: var(--alternate-background-colour) 1px solid;
     font-weight: 400 !important;
     font-size: 0.9em;
     line-height: 1em;
-    background: var(--alternate-background-colour);
     border-radius: 0.25em;
     max-width: 100%;
     margin: 0;
     overflow: auto;
 }
 
+.gh-canvas .kg-code-card code {}
+
 .gh-canvas>pre {
     overflow: auto;
     padding: 16px 20px;
-    background-color: var(--alternate-background-colour);
     color: var(--text-colour);
     border-radius: 5px;
     width: 100%;
@@ -179,6 +178,9 @@ Images
 
 @media (min-width: 1440px) {
     .gh-canvas>pre {
+        grid-column: wide-start/wide-end;
+    }
+    .gh-canvas .kg-code-card {
         grid-column: wide-start/wide-end;
     }
 }
