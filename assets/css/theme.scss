@@ -315,9 +315,10 @@ a.card.no-image:hover {
 
 .toc {
     grid-column: 5;
-    top: 80px;
+    top: 7rem;
+    align-self: start;
     height: 0;
-    overflow: visible !important;
+    overflow-y: visible !important;
     .is-active-link {
         color: var(--text-color)!important;
         &::before {
