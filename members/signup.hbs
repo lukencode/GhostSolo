@@ -13,8 +13,8 @@
         <p class="lead mb-0 mt-2">Unlock full access to {{@site.title}} and see the entire library of members-only
             content & updates</p>
 
-        {{#if @price.monthly}}
-        {{else if @price.yearly}}
+        {{#if mothly_price}}
+        {{else if yearly_price}}
         {{else}}
         {{! no paid options}}
         <script>window.location = '{{@site.url}}';</script>
@@ -43,11 +43,11 @@
 
 
     <div class="d-flex justify-content-center">
-        {{#if @price.monthly}}
+        {{#if mothly_price}}
         <div class="col-md-6 col-lg-4 col-xl-3 d-flex mb-3">
             <a href="javascript:void(0)" data-members-plan="monthly"
                 class="card card-body justify-content-between no-image">
-                <h3><span>$</span><strong>{{@price.monthly}}</strong> / month</h3>
+                <h3><span>$</span><strong>{{mothly_price}}</strong> / month</h3>
                 <div class="flex-grow-1 mb-0 small">
                     <ul>
                         <li>Full access to all private posts</li>
@@ -61,11 +61,11 @@
 
         {{/if}}
 
-        {{#if @price.yearly}}
+        {{#if yearly_price}}
 
         <div class="col-md-6 col-lg-4 col-xl-3 d-flex mb-3 ms-3">
             <a href="#" data-members-plan="Yearly" class="card card-body justify-content-between">
-                <h3><span>$</span><strong>{{@price.yearly}}</strong> / year</h3>
+                <h3><span>$</span><strong>{{yearly_price}}</strong> / year</h3>
                 <div class="flex-grow-1 mb-0 small text-reset">
                     <ul>
                         <li>Full access to all private posts</li>

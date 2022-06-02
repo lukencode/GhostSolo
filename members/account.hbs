@@ -15,7 +15,7 @@
 
                     {{else if @member}}
 
-                    {{#if @price.monthly}}
+                    {{#if mothly_price}}
                     <p class="lead mb-0">You are subscribed to free updates from <strong>{{@site.title}}</strong>,
                         but don't have a paid subscription to unlock full access.</p>
                     <div class="mt-4">
@@ -23,7 +23,7 @@
                             Subscribe
                         </a>
                     </div>
-                    {{else if @price.yearly}}
+                    {{else if yearly_price}}
                     <p class="lead mb-0">You are subscribed to free updates from <strong>{{@site.title}}</strong>,
                         but don't have a paid subscription to unlock full access.</p>
                     <div class="mt-4">
